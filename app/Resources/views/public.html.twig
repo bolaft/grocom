@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang={{ language }}>
+    <head>
+        <title>{% block title %} {{ title|upper }} {% endblock %}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        {% block css %}
+            {% render "FrameStyle:Style:css" %}
+        {% endblock %}
+        {% block less %}
+            {% render "FrameStyle:Style:less" %}
+        {% endblock %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="navbar navbar-fixed-top">
+                {% include ":public:navbar.html.twig" %}
+            </div> <!-- /navbar -->
+            <div class="subnavbar">
+                {% include ":public:subnavbar.html.twig" %}
+            </div> <!-- /subnavbar -->
+            <div id="content">
+                <div class="inner">
+                    <div class="container">
+                        {% block page %}{% endblock %}
+                    </div> <!-- /container -->
+                </div> <!-- /inner -->
+            </div> <!-- /content -->
+            <div id="clear-footer"></div>
+        </div><!-- /wrap -->
+        <footer>
+            <div id="extra">
+                {% include ":public:extra.html.twig" %}
+            </div> <!-- /extra -->
+            <div id="footer">
+                {% include ":public:footer.html.twig" %}
+            </div> <!-- /footer -->
+        </footer>
+        {% block js %}
+            {% render "FrameStyle:Style:js" %}
+        {% endblock %}
+    </body>
+</html>
