@@ -1,3 +1,6 @@
+!.gitkeep
 nbproject
-/nbproject
-nbproject/
+.vagrant
+.svn
+*.php~
+*.json~

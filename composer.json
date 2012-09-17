@@ -1,0 +1,13 @@
+{
+    "name": "s-salim/grocom",
+    "description": "grocom",
+    "authors": [
+        {
+            "name": "Soufian Salim",
+            "email": "soufi@nsal.im"
+        }
+    ],
+    "require": {
+        "friendsofsymfony/user-bundle": "*"
+    }
+}
