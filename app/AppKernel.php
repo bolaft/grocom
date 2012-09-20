@@ -18,21 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Generic\BackOfficeBundle\GenericBackOfficeBundle(),
-            new Generic\CommentBundle\GenericCommentBundle(),
-            new Generic\EAVBundle\GenericEAVBundle(),
-            new Generic\FacebookBundle\GenericFacebookBundle(),
-            new Generic\ForumBundle\GenericForumBundle(),
-            new Generic\MailBundle\GenericMailBundle(),
-            new Generic\NewsletterBundle\GenericNewsletterBundle(),
-            new Generic\PaginatorBundle\GenericPaginatorBundle(),
-            new Generic\SearchBundle\GenericSearchBundle(),
-            new Generic\StyleBundle\GenericStyleBundle(),
-            new Generic\TwitterBundle\GenericTwitterBundle(),
-            new Generic\UserBundle\GenericUserBundle(),
-            new Grocom\ManufacturerBundle\GrocomManufacturerBundle(),
-            new Grocom\OrderBundle\GrocomOrderBundle(),
-            new Grocom\ProductBundle\GrocomProductBundle(),
+            new Generic\User\GenericUser(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

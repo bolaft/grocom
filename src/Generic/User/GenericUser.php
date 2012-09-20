@@ -1,10 +1,10 @@
 <?php
 
-namespace Generic\UserBundle;
+namespace Generic\User;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class GenericUserBundle extends Bundle
+class GenericUser extends Bundle
 {
     public function getParent()
     {

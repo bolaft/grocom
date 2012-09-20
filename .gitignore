@@ -2,5 +2,5 @@
 nbproject
 .vagrant
 .svn
-*.php~
-*.json~
+*.cache
+*~
