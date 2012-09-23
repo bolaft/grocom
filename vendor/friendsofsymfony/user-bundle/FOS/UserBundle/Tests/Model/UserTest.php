@@ -78,51 +78,9 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($user->hasRole($newrole));
     }
 
-    public function testForEqualUsers()
-    {
-        $user1 = $this->getMockBuilder('FOS\UserBundle\Model\User')->setMethods(array('getSalt'))->getMock();
-        $user2 = $this->getMockBuilder('FOS\UserBundle\Model\User')->setMethods(array('getSalt'))->getMock();
-        $user3 = $this->getMockBuilder('FOS\UserBundle\Model\User')->setMethods(array('getSalt'))->getMock();
-
-        $salt1 = $salt3 = 'xxxx';
-        $salt2 = 'yyyy';
-
-        $user2->expects($this->once())
-            ->method('getSalt')
-            ->will($this->returnValue($salt2));
-
-        $user1->expects($this->any())
-            ->method('getSalt')
-            ->will($this->returnValue($salt1));
-
-        $user3->expects($this->once())
-            ->method('getSalt')
-            ->will($this->returnValue($salt3));
-
-        $this->assertFalse($user1->equals($user2));
-        $this->assertTrue($user1->equals($user1));
-        $this->assertTrue($user1->equals($user3));
-    }
-
-    public function testConfirmationToken()
-    {
-        $user = $this->getUser();
-        $this->assertNotNull($user->getConfirmationToken());
-    }
-
-    public function testSameConfirmationToken()
-    {
-        $user = $this->getUser();
-        $user->setConfirmationToken(null);
-
-        $user->generateConfirmationToken();
-        $confirmationToken = $user->getConfirmationToken();
-        $this->assertNotNull($confirmationToken);
-
-        $user->generateConfirmationToken();
-        $this->assertSame($confirmationToken, $user->getConfirmationToken());
-    }
-
+    /**
+     * @return User
+     */
     protected function getUser()
     {
         return $this->getMockForAbstractClass('FOS\UserBundle\Model\User');

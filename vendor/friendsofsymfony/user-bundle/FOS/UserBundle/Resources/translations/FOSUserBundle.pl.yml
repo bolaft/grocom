@@ -58,7 +58,7 @@ registration:
 # Password resetting
 resetting:
     password_already_requested: W przeciągu ostatnich 24 godzin nastąpiła już próba odzyskania hasła.
-    check_email: Na adres %email% Wysłano wiadomość e-mail. Zawiera ona link w którego należy kliknąć aby zresetować hasło.
+    check_email: Na adres %email% wysłano wiadomość e-mail. Zawiera ona link w którego należy kliknąć aby zresetować hasło.
     request:
         invalid_username: Nazwa użytkownika lub e-mail "%username%" nie istnieje.
         username: "Nazwa użytkownika lub e-mail:"
@@ -85,20 +85,12 @@ layout:
     logged_in_as: Zalogowano jako %username%
 
 # Form field labels
-fos_user_group_form_name: "Nazwa grupy:"
-
-fos_user_profile_form_user_username: "Nazwa użytkownika:"
-fos_user_profile_form_user_email: "E-mail:"
-fos_user_profile_form_current: "Obecne hasło:"
-
-fos_user_registration_form_username: "Nazwa użytkownika:"
-fos_user_registration_form_email: "E-mail:"
-fos_user_registration_form_plainPassword_first: "Hasło:"
-fos_user_registration_form_plainPassword_second: "Powtórz hasło:"
-
-fos_user_resetting_form_new_first: "Nowe hasło:"
-fos_user_resetting_form_new_second: "Powtórz hasło:"
-
-fos_user_change_password_form_new_first: "Nowe hasło:"
-fos_user_change_password_form_new_second: "Powtórz hasło:"
-fos_user_change_password_form_current: "Obecne hasło:"
+form:
+    group_name: "Nazwa grupy:"
+    username: "Nazwa użytkownika:"
+    email: "E-mail:"
+    current_password: "Obecne hasło:"
+    password: "Hasło:"
+    password_confirmation: "Powtórz hasło:"
+    new_password: "Nowe hasło:"
+    new_password_confirmation: "Powtórz hasło:"

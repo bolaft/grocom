@@ -12,7 +12,9 @@
 namespace FOS\UserBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Security\Core\Validator\Constraint\UserPassword;
 
 class ProfileFormType extends AbstractType
 {
@@ -26,23 +28,24 @@ class ProfileFormType extends AbstractType
         $this->class = $class;
     }
 
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $child = $builder->create('user', 'form', array('data_class' => $this->class));
-        $this->buildUserForm($child, $options);
+        $this->buildUserForm($builder, $options);
 
-        $builder
-            ->add($child)
-            ->add('current', 'password')
-        ;
+        $builder->add('current_password', 'password', array(
+            'label' => 'form.current_password',
+            'translation_domain' => 'FOSUserBundle',
+            'mapped' => false,
+            'constraints' => new UserPassword(),
+        ));
     }
 
-    public function getDefaultOptions(array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        return array(
-            'data_class' => 'FOS\UserBundle\Form\Model\CheckPassword',
+        $resolver->setDefaults(array(
+            'data_class' => $this->class,
             'intention'  => 'profile',
-        );
+        ));
     }
 
     public function getName()
@@ -53,14 +56,14 @@ class ProfileFormType extends AbstractType
     /**
      * Builds the embedded form representing the user.
      *
-     * @param FormBuilder $builder
-     * @param array       $options
+     * @param FormBuilderInterface $builder
+     * @param array                $options
      */
-    protected function buildUserForm(FormBuilder $builder, array $options)
+    protected function buildUserForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('username')
-            ->add('email', 'email')
+            ->add('username', null, array('label' => 'form.username', 'translation_domain' => 'FOSUserBundle'))
+            ->add('email', 'email', array('label' => 'form.email', 'translation_domain' => 'FOSUserBundle'))
         ;
     }
 }

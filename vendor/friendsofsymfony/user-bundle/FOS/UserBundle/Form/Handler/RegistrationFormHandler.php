@@ -11,11 +11,12 @@
 
 namespace FOS\UserBundle\Form\Handler;
 
-use Symfony\Component\Form\Form;
-use Symfony\Component\HttpFoundation\Request;
 use FOS\UserBundle\Model\UserManagerInterface;
 use FOS\UserBundle\Model\UserInterface;
 use FOS\UserBundle\Mailer\MailerInterface;
+use FOS\UserBundle\Util\TokenGeneratorInterface;
+use Symfony\Component\Form\FormInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class RegistrationFormHandler
 {
@@ -23,18 +24,20 @@ class RegistrationFormHandler
     protected $userManager;
     protected $form;
     protected $mailer;
+    protected $tokenGenerator;
 
-    public function __construct(Form $form, Request $request, UserManagerInterface $userManager, MailerInterface $mailer)
+    public function __construct(FormInterface $form, Request $request, UserManagerInterface $userManager, MailerInterface $mailer, TokenGeneratorInterface $tokenGenerator)
     {
         $this->form = $form;
         $this->request = $request;
         $this->userManager = $userManager;
         $this->mailer = $mailer;
+        $this->tokenGenerator = $tokenGenerator;
     }
 
     public function process($confirmation = false)
     {
-        $user = $this->userManager->createUser();
+        $user = $this->createUser();
         $this->form->setData($user);
 
         if ('POST' === $this->request->getMethod()) {
@@ -54,12 +57,20 @@ class RegistrationFormHandler
     {
         if ($confirmation) {
             $user->setEnabled(false);
+            if (null === $user->getConfirmationToken()) {
+                $user->setConfirmationToken($this->tokenGenerator->generateToken());
+            }
+
             $this->mailer->sendConfirmationEmailMessage($user);
         } else {
-            $user->setConfirmationToken(null);
             $user->setEnabled(true);
         }
 
         $this->userManager->updateUser($user);
+    }
+
+    protected function createUser()
+    {
+        return $this->userManager->createUser();
     }
 }

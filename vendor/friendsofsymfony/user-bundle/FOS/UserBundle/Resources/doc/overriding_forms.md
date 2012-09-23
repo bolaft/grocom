@@ -35,7 +35,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length="255")
+     * @ORM\Column(type="string", length=255)
      *
      * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
      * @Assert\MinLength(limit="3", message="The name is too short.", groups={"Registration", "Profile"})
@@ -50,7 +50,7 @@ class User extends BaseUser
 **Note:**
 
 > By default, the Registration validation group is used when validating a new
-> user registration. Unless you have overriden this value in the configuration,
+> user registration. Unless you have overridden this value in the configuration,
 > make sure you add the validation group named Registration to your name property.
 
 If you try and register using the default registration form you will find that
@@ -67,12 +67,12 @@ custom `name` field.
 
 namespace Acme\UserBundle\Form\Type;
 
-use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormBuilderInterface;
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseType;
 
 class RegistrationFormType extends BaseType
 {
-    public function buildForm(FormBuilder $builder, array $options)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
 
@@ -255,6 +255,7 @@ configuring your form handler as a service in XML:
             <argument type="service" id="request" />
             <argument type="service" id="fos_user.user_manager" />
             <argument type="service" id="fos_user.mailer" />
+            <argument type="service" id="fos_user.util.token_generator" />
         </service>
 
     </services>
@@ -269,7 +270,7 @@ Or if you prefer YAML:
 services:
     acme_user.form.handler.registration:
         class: Acme\UserBundle\Form\Handler\RegistrationFormHandler
-        arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer"]
+        arguments: ["@fos_user.registration.form", "@request", "@fos_user.user_manager", "@fos_user.mailer", "@fos_user.util.token_generator"]
         scope: request
         public: false
 ```

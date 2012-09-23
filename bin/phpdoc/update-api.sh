@@ -1,1 +1,1 @@
-phpdoc -d ../../src -t ../../docs/api
+phpdoc -d ../../src -t ../../doc/api

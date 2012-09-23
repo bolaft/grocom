@@ -1,6 +1,20 @@
 Changelog
 =========
 
+### 2.0.0 (2012-XX-XX)
+
+* Refactored the Propel implementation to get rid of the UserProxy
+* Changed the expectation for `FOS\UserBundle\Model\GroupableInterface#getGroups` to `Traversable`
+* Moved the role constants to the UserInterface instead of the abstract User class
+* Refactored the Doctrine implementations to use the same manager classes
+* Removed the custom uniqueness validation in favor of the core constraints
+* Added getRedirectionUrl method to ProfileController
+* Added an extension point in the registration handler
+* Moved the generation of the token to a dedicated class
+* Added new user provider classes. They should be preferred over using the UserManager as UserProvider.
+* Removed the custom password validation in favor of the Symfony 2.1 constraint
+* Refactored the translation of form labels using the translation_domain option of Symfony 2.1
+
 ### 1.2.4 (2012-07-10)
 
 This release fixes another security issue. Please update to it as soon as possible.

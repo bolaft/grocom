@@ -15,7 +15,6 @@ use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\Config\FileLocator;
 
 class FOSUserExtension extends Extension
@@ -40,6 +39,7 @@ class FOSUserExtension extends Extension
         $container->setAlias('fos_user.mailer', $config['service']['mailer']);
         $container->setAlias('fos_user.util.email_canonicalizer', $config['service']['email_canonicalizer']);
         $container->setAlias('fos_user.util.username_canonicalizer', $config['service']['username_canonicalizer']);
+        $container->setAlias('fos_user.util.token_generator', $config['service']['token_generator']);
         $container->setAlias('fos_user.user_manager', $config['service']['user_manager']);
 
         if ($config['use_listener']) {
@@ -49,7 +49,7 @@ class FOSUserExtension extends Extension
                     break;
 
                 case 'mongodb':
-                    $container->getDefinition('fos_user.user_listener')->addTag('doctrine.common.event_subscriber');
+                    $container->getDefinition('fos_user.user_listener')->addTag('doctrine_mongodb.odm.event_subscriber');
                     break;
 
                 case 'couchdb':
@@ -69,23 +69,13 @@ class FOSUserExtension extends Extension
 
         $this->remapParametersNamespaces($config, $container, array(
             ''          => array(
+                'db_driver' => 'fos_user.storage',
                 'firewall_name' => 'fos_user.firewall_name',
                 'model_manager_name' => 'fos_user.model_manager_name',
                 'user_class' => 'fos_user.model.user.class',
-                'propel_user_class' => 'fos_user.model.user.propel_class',
             ),
             'template'  => 'fos_user.template.%s',
         ));
-
-        // handle the MongoDB document manager name in a specific way as it does not have a registry to make it easy
-        // TODO: change it if https://github.com/symfony/DoctrineMongoDBBundle/pull/31 is merged
-        if ('mongodb' === $config['db_driver']) {
-            if (null === $config['model_manager_name']) {
-                $container->setAlias('fos_user.document_manager', new Alias('doctrine.odm.mongodb.document_manager', false));
-            } else {
-                $container->setAlias('fos_user.document_manager', new Alias(sprintf('doctrine.odm.%s_mongodb.document_manager', $config['model_manager_name']), false));
-            }
-        }
 
         if (!empty($config['profile'])) {
             $this->loadProfile($config['profile'], $container, $loader);
@@ -189,7 +179,6 @@ class FOSUserExtension extends Extension
         $this->remapParametersNamespaces($config, $container, array(
             '' => array(
                 'group_class' => 'fos_user.model.group.class',
-                'propel_group_class' => 'fos_user.model.group.propel_class',
             ),
             'form' => 'fos_user.group.form.%s',
         ));

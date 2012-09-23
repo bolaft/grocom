@@ -12,6 +12,8 @@ group:
         deleted: グループが削除されました
 
 # Security
+"Bad credentials": ユーザ名またはパスワードが間違っています
+
 security:
     login:
         username: "ユーザー名:"
@@ -58,7 +60,7 @@ resetting:
     password_already_requested: このユーザーのパスワードは 24 時間以内ですでにリクエストされています。
     check_email: %email% 宛にメールを送信しました。メールに記載された確認 URL にアクセスして、アカウントを有効化してください。
     request:
-        invalid_username: "%username%" というユーザー名またはメールアドレスは存在しません。
+        invalid_username: "\"%username%\" というユーザー名またはメールアドレスは存在しません。"
         username: "ユーザー名かメールアドレス:"
         submit: パスワードのリセット
     reset:
@@ -83,20 +85,12 @@ layout:
     logged_in_as: %username% でログイン中
 
 # Form field labels
-fos_user_group_form_name: "グループ名:"
-
-fos_user_profile_form_user_username: "ユーザー名:"
-fos_user_profile_form_user_email: "メールアドレス:"
-fos_user_profile_form_current: "現在のパスワード:"
-
-fos_user_registration_form_username: "ユーザー名:"
-fos_user_registration_form_email: "メールアドレス:"
-fos_user_registration_form_plainPassword_first: "パスワード:"
-fos_user_registration_form_plainPassword_second: "確認:"
-
-fos_user_resetting_form_new_first: "新しいパスワード:"
-fos_user_resetting_form_new_second: "確認:"
-
-fos_user_change_password_form_new_first: "新しいパスワード:"
-fos_user_change_password_form_new_second: "確認:"
-fos_user_change_password_form_current: "現在のパスワード:"
+form:
+    group_name: "グループ名:"
+    username: "ユーザー名:"
+    email: "メールアドレス:"
+    current_password: "現在のパスワード:"
+    password: "パスワード:"
+    password_confirmation: "確認:"
+    new_password: "新しいパスワード:"
+    new_password_confirmation: "確認:"

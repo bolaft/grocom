@@ -9,7 +9,6 @@ fos_user:
     db_driver:              ~ # Required
     firewall_name:          ~ # Required
     user_class:             ~ # Required
-    propel_user_class:      ~ # Required when using propel
     use_listener:           true
     use_username_form_type: true
     model_manager_name:     null  # change it to the name of your entity/document manager if you don't want to use the default one.
@@ -56,13 +55,12 @@ fos_user:
         mailer:                 fos_user.mailer.default
         email_canonicalizer:    fos_user.util.canonicalizer.default
         username_canonicalizer: fos_user.util.canonicalizer.default
+        token_generator:        fos_user.util.token_generator.default
         user_manager:           fos_user.user_manager.default
     template:
         engine: twig
-        theme:  FOSUserBundle::form.html.twig
     group:
         group_class:    ~ # Required when using groups
-        propel_group_class:    ~ # Required when using groups and propel
         group_manager:  fos_user.group_manager.default
         form:
             type:               fos_user_group
