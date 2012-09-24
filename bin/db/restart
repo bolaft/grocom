@@ -1,0 +1,13 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo 'Suppression des tables...' . PHP_EOL;
+exec('php ' . ROOT_PATH . '/bin/console doctrine:schema:drop --force');
+
+echo 'Création des tables...' . PHP_EOL;
+exec('php ' . ROOT_PATH . '/bin/console doctrine:schema:create');
+
+include_once('reload');
+
+echo 'Redémarrage terminée !' . PHP_EOL;

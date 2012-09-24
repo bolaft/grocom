@@ -1,0 +1,572 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Generic\EAV\Entity\Group</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Generic.html"><i class="icon-th"></i> Generic</a></li>
+<li><a href="../namespaces/Grocom.html"><i class="icon-th"></i> Grocom</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">219</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#getChild" title="getChild :: Get a child from its name"><span class="description">Get a child from its name</span><pre>getChild()</pre></a></li>
+<li class="method public "><a href="#getChildren" title="getChildren :: Get children"><span class="description">Get children</span><pre>getChildren()</pre></a></li>
+<li class="method public "><a href="#getId" title="getId :: "><span class="description">getId()
+        </span><pre>getId()</pre></a></li>
+<li class="method public "><a href="#getLabel" title="getLabel :: Get label"><span class="description">Get label</span><pre>getLabel()</pre></a></li>
+<li class="method public "><a href="#getLft" title="getLft :: Get lft"><span class="description">Get lft</span><pre>getLft()</pre></a></li>
+<li class="method public "><a href="#getLink" title="getLink :: Get link"><span class="description">Get link</span><pre>getLink()</pre></a></li>
+<li class="method public "><a href="#getLvl" title="getLvl :: Get lvl"><span class="description">Get lvl</span><pre>getLvl()</pre></a></li>
+<li class="method public "><a href="#getName" title="getName :: Get name"><span class="description">Get name</span><pre>getName()</pre></a></li>
+<li class="method public "><a href="#getParent" title="getParent :: Get parent"><span class="description">Get parent</span><pre>getParent()</pre></a></li>
+<li class="method public "><a href="#getRgt" title="getRgt :: Get rgt"><span class="description">Get rgt</span><pre>getRgt()</pre></a></li>
+<li class="method public "><a href="#getRoot" title="getRoot :: Get root"><span class="description">Get root</span><pre>getRoot()</pre></a></li>
+<li class="method public "><a href="#isLeaf" title="isLeaf :: "><span class="description">isLeaf()
+        </span><pre>isLeaf()</pre></a></li>
+<li class="method public "><a href="#setLabel" title="setLabel :: Set label"><span class="description">Set label</span><pre>setLabel()</pre></a></li>
+<li class="method public "><a href="#setLft" title="setLft :: Set lft"><span class="description">Set lft</span><pre>setLft()</pre></a></li>
+<li class="method public "><a href="#setLink" title="setLink :: Set link"><span class="description">Set link</span><pre>setLink()</pre></a></li>
+<li class="method public "><a href="#setLvl" title="setLvl :: Set lvl"><span class="description">Set lvl</span><pre>setLvl()</pre></a></li>
+<li class="method public "><a href="#setName" title="setName :: Set name"><span class="description">Set name</span><pre>setName()</pre></a></li>
+<li class="method public "><a href="#setParent" title="setParent :: Set parent"><span class="description">Set parent</span><pre>setParent()</pre></a></li>
+<li class="method public "><a href="#setRgt" title="setRgt :: Set rgt"><span class="description">Set rgt</span><pre>setRgt()</pre></a></li>
+<li class="method public "><a href="#setRoot" title="setRoot :: Set root"><span class="description">Set root</span><pre>setRoot()</pre></a></li>
+<li class="method public "><a href="#toArray" title="toArray :: "><span class="description">toArray()
+        </span><pre>toArray()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24children" title="$children :: "><span class="description">$children</span><pre>$children</pre></a></li>
+<li class="property private "><a href="#%24id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
+<li class="property private "><a href="#%24label" title="$label :: "><span class="description">$label</span><pre>$label</pre></a></li>
+<li class="property private "><a href="#%24lft" title="$lft :: "><span class="description">$lft</span><pre>$lft</pre></a></li>
+<li class="property private "><a href="#%24link" title="$link :: "><span class="description">$link</span><pre>$link</pre></a></li>
+<li class="property private "><a href="#%24lvl" title="$lvl :: "><span class="description">$lvl</span><pre>$lvl</pre></a></li>
+<li class="property private "><a href="#%24name" title="$name :: "><span class="description">$name</span><pre>$name</pre></a></li>
+<li class="property private "><a href="#%24parent" title="$parent :: "><span class="description">$parent</span><pre>$parent</pre></a></li>
+<li class="property private "><a href="#%24rgt" title="$rgt :: "><span class="description">$rgt</span><pre>$rgt</pre></a></li>
+<li class="property private "><a href="#%24root" title="$root :: "><span class="description">$root</span><pre>$root</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CGeneric%5CEAV%5CEntity%5CGroup" id="\Generic\EAV\Entity\Group"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Generic.html">Generic</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Generic.EAV.html">EAV</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Generic.EAV.Entity.html">Entity</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Generic.EAV.Entity.Group.html">Group</a>
+</li>
+</ul>
+<div href="../classes/Generic.EAV.Entity.Group.html" class="element class">
+<p class="short_description"></p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\Tree</th>
+<td>(type="nested")</td>
+</tr>
+<tr>
+<th>ORM\Table</th>
+<td>Table</td>
+</tr>
+<tr>
+<th>ORM\Entity</th>
+<td>Entity</td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$name</h4></div>
+</div></div>
+</div>
+<a name="getChild" id="getChild"></a><div class="element clickable method public getChild" data-toggle="collapse" data-target=".getChild .collapse">
+<h2>Get a child from its name</h2>
+<pre>getChild($child_name) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$child_name</h4></div>
+</div></div>
+</div>
+<a name="getChildren" id="getChildren"></a><div class="element clickable method public getChildren" data-toggle="collapse" data-target=".getChildren .collapse">
+<h2>Get children</h2>
+<pre>getChildren() : \Generic\EAV\Entity\Doctrine\Common\Collections\Collection</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Generic\EAV\Entity\Doctrine\Common\Collections\Collection</code></div>
+</div></div>
+</div>
+<a name="getId" id="getId"></a><div class="element clickable method public getId" data-toggle="collapse" data-target=".getId .collapse">
+<h2>getId()
+        </h2>
+<pre>getId() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="getLabel" id="getLabel"></a><div class="element clickable method public getLabel" data-toggle="collapse" data-target=".getLabel .collapse">
+<h2>Get label</h2>
+<pre>getLabel() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getLft" id="getLft"></a><div class="element clickable method public getLft" data-toggle="collapse" data-target=".getLft .collapse">
+<h2>Get lft</h2>
+<pre>getLft() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a name="getLink" id="getLink"></a><div class="element clickable method public getLink" data-toggle="collapse" data-target=".getLink .collapse">
+<h2>Get link</h2>
+<pre>getLink() : \Generic\EAV\Entity\Generic\EAV\Entity\Link</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Generic\EAV\Entity\Generic\EAV\Entity\Link</code></div>
+</div></div>
+</div>
+<a name="getLvl" id="getLvl"></a><div class="element clickable method public getLvl" data-toggle="collapse" data-target=".getLvl .collapse">
+<h2>Get lvl</h2>
+<pre>getLvl() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
+<h2>Get name</h2>
+<pre>getName() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getParent" id="getParent"></a><div class="element clickable method public getParent" data-toggle="collapse" data-target=".getParent .collapse">
+<h2>Get parent</h2>
+<pre>getParent() : \Generic\EAV\Entity\App\Entity\Group</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Generic\EAV\Entity\App\Entity\Group</code></div>
+</div></div>
+</div>
+<a name="getRgt" id="getRgt"></a><div class="element clickable method public getRgt" data-toggle="collapse" data-target=".getRgt .collapse">
+<h2>Get rgt</h2>
+<pre>getRgt() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a name="getRoot" id="getRoot"></a><div class="element clickable method public getRoot" data-toggle="collapse" data-target=".getRoot .collapse">
+<h2>Get root</h2>
+<pre>getRoot() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a name="isLeaf" id="isLeaf"></a><div class="element clickable method public isLeaf" data-toggle="collapse" data-target=".isLeaf .collapse">
+<h2>isLeaf()
+        </h2>
+<pre>isLeaf() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="setLabel" id="setLabel"></a><div class="element clickable method public setLabel" data-toggle="collapse" data-target=".setLabel .collapse">
+<h2>Set label</h2>
+<pre>setLabel(string $label) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$label</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setLft" id="setLft"></a><div class="element clickable method public setLft" data-toggle="collapse" data-target=".setLft .collapse">
+<h2>Set lft</h2>
+<pre>setLft(integer $lft) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lft</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setLink" id="setLink"></a><div class="element clickable method public setLink" data-toggle="collapse" data-target=".setLink .collapse">
+<h2>Set link</h2>
+<pre>setLink(\Generic\EAV\Entity\Link $link) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$link</h4>
+<code>\Generic\EAV\Entity\Generic\EAV\Entity\Link</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setLvl" id="setLvl"></a><div class="element clickable method public setLvl" data-toggle="collapse" data-target=".setLvl .collapse">
+<h2>Set lvl</h2>
+<pre>setLvl(integer $lvl) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$lvl</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
+<h2>Set name</h2>
+<pre>setName(string $name) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setParent" id="setParent"></a><div class="element clickable method public setParent" data-toggle="collapse" data-target=".setParent .collapse">
+<h2>Set parent</h2>
+<pre>setParent(\Generic\EAV\Entity\Group $parent) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$parent</h4>
+<code>\Generic\EAV\Entity\App\Entity\Group</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setRgt" id="setRgt"></a><div class="element clickable method public setRgt" data-toggle="collapse" data-target=".setRgt .collapse">
+<h2>Set rgt</h2>
+<pre>setRgt(integer $rgt) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rgt</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="setRoot" id="setRoot"></a><div class="element clickable method public setRoot" data-toggle="collapse" data-target=".setRoot .collapse">
+<h2>Set root</h2>
+<pre>setRoot(integer $root) : <a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$root</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Group.html">\Generic\EAV\Entity\Group</a></code></div>
+</div></div>
+</div>
+<a name="toArray" id="toArray"></a><div class="element clickable method public toArray" data-toggle="collapse" data-target=".toArray .collapse">
+<h2>toArray()
+        </h2>
+<pre>toArray() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24children" id="$children"> </a><div class="element clickable property private $children" data-toggle="collapse" data-target=".$children .collapse">
+<h2>$children</h2>
+<pre>$children </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>ORM\OneToMany</th>
+<td>OneToMany</td>
+</tr>
+<tr>
+<th>ORM\OrderBy</th>
+<td>OrderBy</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24id" id="$id"> </a><div class="element clickable property private $id" data-toggle="collapse" data-target=".$id .collapse">
+<h2>$id</h2>
+<pre>$id </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>ORM\Column</th>
+<td>(name="id", type="integer")</td>
+</tr>
+<tr>
+<th>ORM\Id</th>
+<td>Id</td>
+</tr>
+<tr>
+<th>ORM\GeneratedValue</th>
+<td>GeneratedValue</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24label" id="$label"> </a><div class="element clickable property private $label" data-toggle="collapse" data-target=".$label .collapse">
+<h2>$label</h2>
+<pre>$label </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>ORM\Column</th>
+<td>(name="label", type="string", length=64)</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24lft" id="$lft"> </a><div class="element clickable property private $lft" data-toggle="collapse" data-target=".$lft .collapse">
+<h2>$lft</h2>
+<pre>$lft </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\TreeLeft</th>
+<td></td>
+</tr>
+<tr>
+<th>ORM\Column</th>
+<td>(name="lft", type="integer")</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24link" id="$link"> </a><div class="element clickable property private $link" data-toggle="collapse" data-target=".$link .collapse">
+<h2>$link</h2>
+<pre>$link </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>ORM\OneToOne</th>
+<td>OneToOne</td>
+</tr>
+<tr>
+<th>ORM\JoinColumn</th>
+<td>JoinColumn</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24lvl" id="$lvl"> </a><div class="element clickable property private $lvl" data-toggle="collapse" data-target=".$lvl .collapse">
+<h2>$lvl</h2>
+<pre>$lvl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\TreeLevel</th>
+<td></td>
+</tr>
+<tr>
+<th>ORM\Column</th>
+<td>(name="lvl", type="integer")</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24name" id="$name"> </a><div class="element clickable property private $name" data-toggle="collapse" data-target=".$name .collapse">
+<h2>$name</h2>
+<pre>$name </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>ORM\Column</th>
+<td>(name="name", type="string", length=64)</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24parent" id="$parent"> </a><div class="element clickable property private $parent" data-toggle="collapse" data-target=".$parent .collapse">
+<h2>$parent</h2>
+<pre>$parent </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\TreeParent</th>
+<td></td>
+</tr>
+<tr>
+<th>ORM\ManyToOne</th>
+<td>ManyToOne</td>
+</tr>
+<tr>
+<th>ORM\JoinColumn</th>
+<td>JoinColumn</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24rgt" id="$rgt"> </a><div class="element clickable property private $rgt" data-toggle="collapse" data-target=".$rgt .collapse">
+<h2>$rgt</h2>
+<pre>$rgt </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\TreeRight</th>
+<td></td>
+</tr>
+<tr>
+<th>ORM\Column</th>
+<td>(name="rgt", type="integer")</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24root" id="$root"> </a><div class="element clickable property private $root" data-toggle="collapse" data-target=".$root .collapse">
+<h2>$root</h2>
+<pre>$root </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>Gedmo\TreeRoot</th>
+<td></td>
+</tr>
+<tr>
+<th>ORM\Column</th>
+<td>(name="root", type="integer", nullable=true)</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-09-24T20:55:41+02:00.<br></footer></div>
+</div>
+</body>
+</html>

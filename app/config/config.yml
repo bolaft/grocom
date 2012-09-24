@@ -1,3 +1,10 @@
+fos_comment:
+    db_driver: orm
+    class:
+        model:
+            comment: Generic\Comment\Entity\Comment
+            thread: Generic\Comment\Entity\Thread
+
 fos_user:
     db_driver: orm
     firewall_name: main
@@ -62,3 +69,35 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+sensio_framework_extra:
+    view:
+        annotations: false
+
+jms_serializer:
+    handlers:
+        object_based: false
+        datetime:
+            format: "Y-m-dTH:i:s" # ISO8601
+            default_timezone: "UTC" # defaults to whatever timezone set in php.ini or via date_default_timezone_set
+        array_collection: true
+        form_error: true
+        constraint_violation: true
+
+    property_naming:
+        separator:  _
+        lower_case: true
+
+    metadata:
+        cache: file
+        debug: "%kernel.debug%"
+        file_cache:
+            dir: "%kernel.cache_dir%/serializer"
+
+        # Using auto-detection, the mapping files for each bundle will be
+        # expected in the Resources/config/serializer directory.
+        #
+        # Example:
+        # class: My\FooBundle\Entity\User
+        # expected path: @MyFooBundle/Resources/config/serializer/Entity.User.(yml|xml|php)
+        auto_detection: true

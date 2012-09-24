@@ -1,0 +1,5 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo exec('php ../console cache:clear') . PHP_EOL;

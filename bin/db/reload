@@ -1,0 +1,8 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo 'Chargement des fixtures : "y" pour continuer, "n" pour annuler' . PHP_EOL;
+exec('php ' . ROOT_PATH . '/bin/console doctrine:fixtures:load');
+
+echo 'Chargement terminé !' . PHP_EOL;

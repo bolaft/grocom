@@ -1,0 +1,14 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+include_once 'update';
+
+echo 'Changement des droits de app/cache et app/logs...' . PHP_EOL;
+exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/cache');
+exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/logs');
+
+include_once 'db/create';
+include_once 'db/restart';
+
+echo 'Installation terminée !' . PHP_EOL;

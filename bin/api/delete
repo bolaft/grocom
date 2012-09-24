@@ -1,0 +1,8 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo 'Suppression de l\'API...' . PHP_EOL;
+exec('sudo find '. ROOT_PATH . '/doc/api/ -type f -delete');
+
+echo 'Suppression terminée !' . PHP_EOL;

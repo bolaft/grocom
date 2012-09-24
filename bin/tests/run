@@ -1,0 +1,8 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo 'Lancement des tests...' . PHP_EOL;
+exec('phpunit -c ' . APPLICATION_PATH . '/phpunit.xml.dist');
+
+echo 'Tests terminés !' . PHP_EOL;

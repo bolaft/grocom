@@ -7,6 +7,3 @@ defined('ROOT_PATH')
 
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', dirname(__FILE__) . '/../app/');
-
-require_once APPLICATION_PATH . '/bootstrap.php.cache';
-require_once APPLICATION_PATH . '/AppKernel.php';

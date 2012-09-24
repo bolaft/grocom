@@ -1,0 +1,8 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+echo 'Création de l\'API...' . PHP_EOL;
+exec('phpdoc -c ' . APPLICATION_PATH . '/phpdoc.dist.xml');
+
+echo 'Création terminée !' . PHP_EOL;

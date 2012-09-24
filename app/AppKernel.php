@@ -20,12 +20,16 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Generic\User\GenericUser(),
-            new Generic\EAV\GenericEAV(),
+            new FOS\CommentBundle\FOSCommentBundle(),
             new Generic\Admin\GenericAdmin(),
-            new Grocom\Product\GrocomProduct(),
+            new Generic\Comment\GenericComment(),
+            new Generic\EAV\GenericEAV(),
+            new Generic\User\GenericUser(),
             new Grocom\Order\GrocomOrder(),
+            new Grocom\Product\GrocomProduct(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
