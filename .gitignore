@@ -1,9 +1,7 @@
-app/bootstrap.php.cache
 app/cache/*
 app/logs/*
 build/
 nbproject
 .vagrant
 .svn
-.cache
 *~
