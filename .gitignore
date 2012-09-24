@@ -4,6 +4,8 @@ vendor/*
 web/bundles/*
 build/
 nbproject
+composer.lock
 .vagrant
 .svn
+*.po
 *~
