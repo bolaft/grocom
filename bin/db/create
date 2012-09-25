@@ -3,6 +3,6 @@
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
 echo 'Création de la base de données...' . PHP_EOL;
-exec('php ' . ROOT_PATH . '/bin/console doctrine:database:create');
+exec('php ' . APPLICATION_PATH . '/console doctrine:database:create');
 
 echo 'Création terminée !' . PHP_EOL;

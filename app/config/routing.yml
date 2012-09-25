@@ -1,4 +1,4 @@
-GenericAdmin:
+generic_admin:
     resource: "@GenericAdmin/Resources/config/routing.yml"
     prefix: /admin
 
@@ -25,6 +25,10 @@ fos_comment_api:
     type: rest
     resource: "@FOSCommentBundle/Resources/config/routing.yml"
     prefix: /api
+
+generic_site: # Laisser en bas du fichier
+    resource: "@GenericSite/Resources/config/routing.yml"
+    prefix: /
 
 # Internal routing configuration to handle ESI
 #_internal:

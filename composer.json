@@ -21,7 +21,8 @@
         "friendsofsymfony/user-bundle": "*",
         "friendsofsymfony/comment-bundle": "*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "leafo/lessphp": "*"
+        "leafo/lessphp": "*",
+        "oryzone/boilerplate-bundle" : "*"
     },
     "scripts": {
         "post-install-cmd": [
