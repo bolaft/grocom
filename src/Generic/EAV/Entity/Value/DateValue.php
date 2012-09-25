@@ -14,15 +14,15 @@ class DateValue extends BaseValue
     /**
      * @ORM\Column(type="date")
      */
-    protected $date_value;
+    protected $date;
 
     public function setValue($value)
     {
-        $this->date_value = $value;
+        $this->date = $value;
     }
 
     public function getValue()
     {
-        return $this->date_value;
+        return $this->date;
     }
 }

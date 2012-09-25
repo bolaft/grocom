@@ -21,8 +21,7 @@
         "friendsofsymfony/user-bundle": "*",
         "friendsofsymfony/comment-bundle": "*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "leafo/lessphp": "*",
-        "gedmo/doctrine-extensions": "*"
+        "leafo/lessphp": "*"
     },
     "scripts": {
         "post-install-cmd": [

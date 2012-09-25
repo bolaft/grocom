@@ -6,10 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\Entity(repositoryClass="Generic\EAV\Repository\InstanceRepository")
+ * @ORM\Entity
  * @ORM\Table(name="generic_eav_instance")
  * @ORM\InheritanceType("JOINED")
- * @ORM\DiscriminatorColumn(name="instance_type", type="string")
+ * @ORM\DiscriminatorColumn(name="discriminator", type="string")
  * @ORM\DiscriminatorMap({
  *      "product" = "Grocom\Product\Entity\Product",
  *      "order"   = "Grocom\Order\Entity\Order"
@@ -17,11 +17,6 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Instance
 {
-    private static $children = array(
-        'Grocom\Product\Entity\Product' => 'Product',
-        'Grocom\Order\Entity\Order'     => 'Order',
-    );
-
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -30,23 +25,12 @@ class Instance
     protected $id;
 
     /**
-     * The name of this instance
-     *
-     * @ORM\Column(type="string", length=100)
-     */
-    protected $name;
-
-    /**
-     * The type of this instance
-     *
      * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="instances")
      */
     protected $type;
 
     /**
-     * The values of this instance
-     *
-     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="instance", cascade={"remove"})
+     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="instance")
      */
     protected $values;
 
@@ -65,28 +49,6 @@ class Instance
         return $this->id;
     }
 
-    /**
-     * Set name
-     *
-     * @param  string   $name
-     * @return Instance
-     */
-    public function setName($name = null)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 
     /**
      * Set type
@@ -96,7 +58,6 @@ class Instance
      */
     public function setType(\Generic\EAV\Entity\Type $type = null)
     {
-        $type->addInstance($this);
         $this->type = $type;
 
         return $this;
@@ -112,20 +73,26 @@ class Instance
         return $this->type;
     }
 
-    public function addValue(\Generic\EAV\Entity\Value\Value $value = null)
+    /**
+     * Add value
+     *
+     * @param  Generic\EAV\Entity\Value\Value $value
+     * @return Instance
+     */
+    public function addValue(\Generic\EAV\Entity\Value\Value $value)
     {
         $this->values[] = $value;
 
         return $this;
     }
 
+    /**
+     * Get values
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
     public function getValues()
     {
         return $this->values;
-    }
-
-    public static function children()
-    {
-        return self::$children;
     }
 }

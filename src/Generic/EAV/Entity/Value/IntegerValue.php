@@ -14,15 +14,15 @@ class IntegerValue extends BaseValue
     /**
      * @ORM\Column(type="integer")
      */
-    protected $integer_value;
+    protected $integer;
 
     public function setValue($value)
     {
-        $this->integer_value = $value;
+        $this->integer = $value;
     }
 
     public function getValue()
     {
-        return $this->integer_value;
+        return $this->integer;
     }
 }

@@ -14,15 +14,15 @@ class TextValue extends BaseValue
     /**
      * @ORM\Column(type="text")
      */
-    protected $text_value;
+    protected $text;
 
     public function setValue($value)
     {
-        $this->text_value = $value;
+        $this->text = $value;
     }
 
     public function getValue()
     {
-        return $this->text_value;
+        return $this->text;
     }
 }

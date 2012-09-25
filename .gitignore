@@ -3,6 +3,8 @@ app/logs/*
 vendor/*
 web/bundles/*
 build/
+app/phpunit.xml
+app/phpdoc.xml
 nbproject
 composer.lock
 .vagrant

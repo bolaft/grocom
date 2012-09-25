@@ -14,15 +14,15 @@ class StringValue extends BaseValue
     /**
      * @ORM\Column(type="string", length=255)
      */
-    protected $string_value;
+    protected $string;
 
     public function setValue($value)
     {
-        $this->string_value = $value;
+        $this->string = $value;
     }
 
     public function getValue()
     {
-        return $this->string_value;
+        return $this->string;
     }
 }

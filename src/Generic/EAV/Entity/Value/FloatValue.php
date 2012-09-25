@@ -14,15 +14,15 @@ class FloatValue extends BaseValue
     /**
      * @ORM\Column(type="float")
      */
-    protected $float_value;
+    protected $float;
 
     public function setValue($value)
     {
-        $this->float_value = $value;
+        $this->float = $value;
     }
 
     public function getValue()
     {
-        return $this->float_value;
+        return $this->float;
     }
 }

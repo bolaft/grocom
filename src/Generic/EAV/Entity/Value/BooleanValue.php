@@ -14,15 +14,15 @@ class BooleanValue extends BaseValue
     /**
      * @ORM\Column(type="boolean")
      */
-    protected $boolean_value;
+    protected $boolean;
 
     public function setValue($value)
     {
-        $this->boolean_value = $value;
+        $this->boolean = $value;
     }
 
     public function getValue()
     {
-        return $this->boolean_value;
+        return $this->boolean;
     }
 }

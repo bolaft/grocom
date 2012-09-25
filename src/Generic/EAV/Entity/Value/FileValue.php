@@ -14,15 +14,15 @@ class FileValue extends BaseValue
     /**
      * @ORM\Column(type="string", length=255)
      */
-    protected $file_value;
+    protected $file;
 
     public function setValue($value)
     {
-        $this->file_value = $value;
+        $this->file = $value;
     }
 
     public function getValue()
     {
-        return $this->file_value;
+        return $this->file;
     }
 }
