@@ -16,7 +16,6 @@ use Doctrine\ORM\Mapping as ORM;
  *      "float"   = "Generic\EAV\Entity\Value\FloatValue",
  *      "boolean" = "Generic\EAV\Entity\Value\BooleanValue",
  *      "date"    = "Generic\EAV\Entity\Value\DateValue",
- *      "file"    = "Generic\EAV\Entity\Value\FileValue"
  * })
  */
 class Value

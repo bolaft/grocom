@@ -8,7 +8,7 @@ echo 'Changement des droits de app/cache et app/logs...' . PHP_EOL;
 exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/cache');
 exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/logs');
 
-include_once 'db/create';
-include_once 'db/restart';
+include_once dirname(__FILE__) . '/../db/create';
+include_once dirname(__FILE__) . '/../db/restart';
 
 echo 'Installation terminée !' . PHP_EOL;
