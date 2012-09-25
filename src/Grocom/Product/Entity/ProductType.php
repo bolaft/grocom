@@ -14,9 +14,4 @@ class ProductType extends BaseType
     {
         return '\Grocom\Product\Entity\Product';
     }
-
-    public function getFormClass()
-    {
-        return '\Grocom\Product\Form\Product';
-    }
 }

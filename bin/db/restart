@@ -10,4 +10,4 @@ exec('php ' . ROOT_PATH . '/bin/console doctrine:schema:create');
 
 include_once('reload');
 
-echo 'Redémarrage terminée !' . PHP_EOL;
+echo 'Redémarrage terminé !' . PHP_EOL;

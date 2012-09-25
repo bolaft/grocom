@@ -14,9 +14,4 @@ class OrderType extends BaseType
     {
         return '\Order\Product\Entity\Order';
     }
-
-    public function getFormClass()
-    {
-        return '\Order\Product\Form\Order';
-    }
 }
