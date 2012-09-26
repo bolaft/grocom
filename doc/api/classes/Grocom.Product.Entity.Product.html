@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">219</span></a></li>
+                <span class="label label-info">127</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -59,22 +59,16 @@
 <li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
         </span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#addOrder" title="addOrder :: Add order"><span class="description">Add order</span><pre>addOrder()</pre></a></li>
-<li class="method public inherited"><a href="#addValue" title="addValue :: "><span class="description">addValue()
-        </span><pre>addValue()</pre></a></li>
-<li class="method public inherited"><a href="#children" title="children :: "><span class="description">children()
-        </span><pre>children()</pre></a></li>
+<li class="method public inherited"><a href="#addValue" title="addValue :: Add value"><span class="description">Add value</span><pre>addValue()</pre></a></li>
 <li class="method public "><a href="#getDescription" title="getDescription :: Get description"><span class="description">Get description</span><pre>getDescription()</pre></a></li>
 <li class="method public inherited"><a href="#getId" title="getId :: Get id"><span class="description">Get id</span><pre>getId()</pre></a></li>
-<li class="method public inherited"><a href="#getName" title="getName :: Get name"><span class="description">Get name</span><pre>getName()</pre></a></li>
 <li class="method public "><a href="#getOrders" title="getOrders :: Get orders"><span class="description">Get orders</span><pre>getOrders()</pre></a></li>
 <li class="method public "><a href="#getPrice" title="getPrice :: Get price"><span class="description">Get price</span><pre>getPrice()</pre></a></li>
 <li class="method public "><a href="#getPublished" title="getPublished :: Get published"><span class="description">Get published</span><pre>getPublished()</pre></a></li>
 <li class="method public inherited"><a href="#getType" title="getType :: Get type"><span class="description">Get type</span><pre>getType()</pre></a></li>
-<li class="method public inherited"><a href="#getValues" title="getValues :: "><span class="description">getValues()
-        </span><pre>getValues()</pre></a></li>
+<li class="method public inherited"><a href="#getValues" title="getValues :: Get values"><span class="description">Get values</span><pre>getValues()</pre></a></li>
 <li class="method public "><a href="#removeOrder" title="removeOrder :: Remove order"><span class="description">Remove order</span><pre>removeOrder()</pre></a></li>
 <li class="method public "><a href="#setDescription" title="setDescription :: Set description"><span class="description">Set description</span><pre>setDescription()</pre></a></li>
-<li class="method public inherited"><a href="#setName" title="setName :: Set name"><span class="description">Set name</span><pre>setName()</pre></a></li>
 <li class="method public "><a href="#setOrders" title="setOrders :: Set orders"><span class="description">Set orders</span><pre>setOrders()</pre></a></li>
 <li class="method public "><a href="#setPrice" title="setPrice :: Set price"><span class="description">Set price</span><pre>setPrice()</pre></a></li>
 <li class="method public "><a href="#setPublished" title="setPublished :: Set published"><span class="description">Set published</span><pre>setPublished()</pre></a></li>
@@ -84,14 +78,11 @@
 <li class="nav-header protected">» Protected</li>
 <li class="property protected "><a href="#%24description" title="$description :: "><span class="description">$description</span><pre>$description</pre></a></li>
 <li class="property protected inherited"><a href="#%24id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
-<li class="property protected inherited"><a href="#%24name" title="$name :: The name of this instance"><span class="description">The name of this instance</span><pre>$name</pre></a></li>
 <li class="property protected "><a href="#%24orders" title="$orders :: "><span class="description">$orders</span><pre>$orders</pre></a></li>
 <li class="property protected "><a href="#%24price" title="$price :: "><span class="description">$price</span><pre>$price</pre></a></li>
 <li class="property protected "><a href="#%24published" title="$published :: "><span class="description">$published</span><pre>$published</pre></a></li>
-<li class="property protected inherited"><a href="#%24type" title="$type :: The type of this instance"><span class="description">The type of this instance</span><pre>$type</pre></a></li>
-<li class="property protected inherited"><a href="#%24values" title="$values :: The values of this instance"><span class="description">The values of this instance</span><pre>$values</pre></a></li>
-<li class="nav-header private">» Private</li>
-<li class="property private inherited"><a href="#%24children" title="$children :: "><span class="description">$children</span><pre>$children</pre></a></li>
+<li class="property protected inherited"><a href="#%24type" title="$type :: "><span class="description">$type</span><pre>$type</pre></a></li>
+<li class="property protected inherited"><a href="#%24values" title="$values :: "><span class="description">$values</span><pre>$values</pre></a></li>
 </ul>
 </div>
 <div class="span8">
@@ -145,9 +136,8 @@
 </div></div>
 </div>
 <a name="addValue" id="addValue"></a><div class="element clickable method public addValue" data-toggle="collapse" data-target=".addValue .collapse">
-<h2>addValue()
-        </h2>
-<pre>addValue(\Generic\EAV\Entity\Value\Value $value) </pre>
+<h2>Add value</h2>
+<pre>addValue(\Generic\EAV\Entity\Value\Value $value) : <a href="../classes/Generic.EAV.Entity.Instance.html">\Generic\EAV\Entity\Instance</a></pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -156,20 +146,12 @@
 <td>\Generic\EAV\Entity\Instance::addValue()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$value</h4></div>
-</div></div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>\Generic\EAV\Entity\Generic\EAV\Entity\Value\Value</code>
 </div>
-<a name="children" id="children"></a><div class="element clickable method public children" data-toggle="collapse" data-target=".children .collapse">
-<h2>children()
-        </h2>
-<pre>children() </pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\Generic\EAV\Entity\Instance::children()</td>
-</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Instance.html">\Generic\EAV\Entity\Instance</a></code></div>
 </div></div>
 </div>
 <a name="getDescription" id="getDescription"></a><div class="element clickable method public getDescription" data-toggle="collapse" data-target=".getDescription .collapse">
@@ -194,20 +176,6 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>integer</code></div>
-</div></div>
-</div>
-<a name="getName" id="getName"></a><div class="element clickable method public getName" data-toggle="collapse" data-target=".getName .collapse">
-<h2>Get name</h2>
-<pre>getName() : string</pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\Generic\EAV\Entity\Instance::getName()</td>
-</tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getOrders" id="getOrders"></a><div class="element clickable method public getOrders" data-toggle="collapse" data-target=".getOrders .collapse">
@@ -255,9 +223,8 @@
 </div></div>
 </div>
 <a name="getValues" id="getValues"></a><div class="element clickable method public getValues" data-toggle="collapse" data-target=".getValues .collapse">
-<h2>getValues()
-        </h2>
-<pre>getValues() </pre>
+<h2>Get values</h2>
+<pre>getValues() : \Generic\EAV\Entity\Doctrine\Common\Collections\Collection</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -265,6 +232,8 @@
 <th>inherited_from</th>
 <td>\Generic\EAV\Entity\Instance::getValues()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Generic\EAV\Entity\Doctrine\Common\Collections\Collection</code></div>
 </div></div>
 </div>
 <a name="removeOrder" id="removeOrder"></a><div class="element clickable method public removeOrder" data-toggle="collapse" data-target=".removeOrder .collapse">
@@ -295,25 +264,6 @@
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code><a href="../classes/Grocom.Product.Entity.Product.html">\Grocom\Product\Entity\Product</a></code></div>
-</div></div>
-</div>
-<a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
-<h2>Set name</h2>
-<pre>setName(string $name) : <a href="../classes/Generic.EAV.Entity.Instance.html">\Generic\EAV\Entity\Instance</a></pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\Generic\EAV\Entity\Instance::setName()</td>
-</tr></table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Instance.html">\Generic\EAV\Entity\Instance</a></code></div>
 </div></div>
 </div>
 <a name="setOrders" id="setOrders"></a><div class="element clickable method public setOrders" data-toggle="collapse" data-target=".setOrders .collapse">
@@ -420,24 +370,6 @@
 </table>
 </div></div>
 </div>
-<a name="%24name" id="$name"> </a><div class="element clickable property protected $name" data-toggle="collapse" data-target=".$name .collapse">
-<h2>The name of this instance</h2>
-<pre>$name </pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered">
-<tr>
-<th>ORM\Column</th>
-<td>(type="string", length=100)</td>
-</tr>
-<tr>
-<th>inherited_from</th>
-<td>\Generic\EAV\Entity\Instance::$$name</td>
-</tr>
-</table>
-</div></div>
-</div>
 <a name="%24orders" id="$orders"> </a><div class="element clickable property protected $orders" data-toggle="collapse" data-target=".$orders .collapse">
 <h2>$orders</h2>
 <pre>$orders </pre>
@@ -475,7 +407,7 @@
 </div></div>
 </div>
 <a name="%24type" id="$type"> </a><div class="element clickable property protected $type" data-toggle="collapse" data-target=".$type .collapse">
-<h2>The type of this instance</h2>
+<h2>$type</h2>
 <pre>$type </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
@@ -493,7 +425,7 @@
 </div></div>
 </div>
 <a name="%24values" id="$values"> </a><div class="element clickable property protected $values" data-toggle="collapse" data-target=".$values .collapse">
-<h2>The values of this instance</h2>
+<h2>$values</h2>
 <pre>$values </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
@@ -510,18 +442,6 @@
 </table>
 </div></div>
 </div>
-<a name="%24children" id="$children"> </a><div class="element clickable property private $children" data-toggle="collapse" data-target=".$children .collapse">
-<h2>$children</h2>
-<pre>$children </pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered"><tr>
-<th>inherited_from</th>
-<td>\Generic\EAV\Entity\Instance::$$children</td>
-</tr></table>
-</div></div>
-</div>
 </div>
 </div>
 </div>
@@ -529,7 +449,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2012-09-24T20:55:41+02:00.<br></footer></div>
+            generated on 2012-09-26T18:53:56+02:00.<br></footer></div>
 </div>
 </body>
 </html>

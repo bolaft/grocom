@@ -32,7 +32,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">219</span></a></li>
+                <span class="label label-info">127</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -58,34 +58,20 @@
 <i class="icon-custom icon-method"></i> Methods</li>
 <li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
         </span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#addAttribute" title="addAttribute :: "><span class="description">addAttribute()
-        </span><pre>addAttribute()</pre></a></li>
+<li class="method public "><a href="#addAttribute" title="addAttribute :: Add attribute"><span class="description">Add attribute</span><pre>addAttribute()</pre></a></li>
 <li class="method public "><a href="#addInstance" title="addInstance :: Add instance"><span class="description">Add instance</span><pre>addInstance()</pre></a></li>
-<li class="method public "><a href="#addLink" title="addLink :: Add attribute_links"><span class="description">Add attribute_links</span><pre>addLink()</pre></a></li>
-<li class="method public "><a href="#children" title="children :: "><span class="description">children()
-        </span><pre>children()</pre></a></li>
-<li class="method public "><a href="#getAttributeLinks" title="getAttributeLinks :: Get attribute_links"><span class="description">Get attribute_links</span><pre>getAttributeLinks()</pre></a></li>
-<li class="method public "><a href="#getAttributes" title="getAttributes :: "><span class="description">getAttributes()
-        </span><pre>getAttributes()</pre></a></li>
+<li class="method public "><a href="#getAttributes" title="getAttributes :: Get attributes"><span class="description">Get attributes</span><pre>getAttributes()</pre></a></li>
 <li class="method public "><a href="#getId" title="getId :: Get id"><span class="description">Get id</span><pre>getId()</pre></a></li>
 <li class="method public "><a href="#getInstances" title="getInstances :: Get instances"><span class="description">Get instances</span><pre>getInstances()</pre></a></li>
 <li class="method public "><a href="#getName" title="getName :: Get name"><span class="description">Get name</span><pre>getName()</pre></a></li>
-<li class="method public "><a href="#getRootGroup" title="getRootGroup :: "><span class="description">getRootGroup()
-        </span><pre>getRootGroup()</pre></a></li>
 <li class="method public "><a href="#setName" title="setName :: Set name"><span class="description">Set name</span><pre>setName()</pre></a></li>
-<li class="method public "><a href="#setRootGroup" title="setRootGroup :: "><span class="description">setRootGroup()
-        </span><pre>setRootGroup()</pre></a></li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties</li>
 <li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24attribute_links" title="$attribute_links :: The entity is linked to one or several attributes, through an association class"><span class="description">The entity is linked to one or several attributes, through an association class</span><pre>$attribute_links</pre></a></li>
+<li class="property protected "><a href="#%24attributes" title="$attributes :: "><span class="description">$attributes</span><pre>$attributes</pre></a></li>
 <li class="property protected "><a href="#%24id" title="$id :: "><span class="description">$id</span><pre>$id</pre></a></li>
-<li class="property protected "><a href="#%24instances" title="$instances :: The instances of this type"><span class="description">The instances of this type</span><pre>$instances</pre></a></li>
-<li class="property protected "><a href="#%24name" title="$name :: The entity type name (which has to be unique)"><span class="description">The entity type name (which has to be unique)</span><pre>$name</pre></a></li>
-<li class="property protected "><a href="#%24root_group" title="$root_group :: The root node of this type's display hierarchy"><span class="description">The root node of this type's display hierarchy</span><pre>$root_group</pre></a></li>
-<li class="nav-header private">» Private</li>
-<li class="property private "><a href="#%24attributes" title="$attributes :: "><span class="description">$attributes</span><pre>$attributes</pre></a></li>
-<li class="property private "><a href="#%24children" title="$children :: "><span class="description">$children</span><pre>$children</pre></a></li>
+<li class="property protected "><a href="#%24instances" title="$instances :: "><span class="description">$instances</span><pre>$instances</pre></a></li>
+<li class="property protected "><a href="#%24name" title="$name :: "><span class="description">$name</span><pre>$name</pre></a></li>
 </ul>
 </div>
 <div class="span8">
@@ -131,24 +117,23 @@
 <a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
 <h2>__construct()
         </h2>
-<pre>__construct($name) </pre>
+<pre>__construct() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$name</h4></div>
-</div></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="addAttribute" id="addAttribute"></a><div class="element clickable method public addAttribute" data-toggle="collapse" data-target=".addAttribute .collapse">
-<h2>addAttribute()
-        </h2>
-<pre>addAttribute(\Generic\EAV\Entity\Attribute $attribute, $required) </pre>
+<h2>Add attribute</h2>
+<pre>addAttribute(\Generic\EAV\Entity\Attribute $attribute) : <a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$attribute</h4></div>
-<div class="subelement argument"><h4>$required</h4></div>
+<div class="subelement argument">
+<h4>$attribute</h4>
+<code>\Generic\EAV\Entity\Generic\EAV\Entity\Attribute</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></code></div>
 </div></div>
 </div>
 <a name="addInstance" id="addInstance"></a><div class="element clickable method public addInstance" data-toggle="collapse" data-target=".addInstance .collapse">
@@ -166,44 +151,15 @@
 <div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></code></div>
 </div></div>
 </div>
-<a name="addLink" id="addLink"></a><div class="element clickable method public addLink" data-toggle="collapse" data-target=".addLink .collapse">
-<h2>Add attribute_links</h2>
-<pre>addLink(\Generic\EAV\Entity\Link $attributeLinks) : <a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$attributeLinks</h4>
-<code>\Generic\EAV\Entity\Generic\EAV\Entity\Link</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></code></div>
-</div></div>
-</div>
-<a name="children" id="children"></a><div class="element clickable method public children" data-toggle="collapse" data-target=".children .collapse">
-<h2>children()
-        </h2>
-<pre>children() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
-</div>
-<a name="getAttributeLinks" id="getAttributeLinks"></a><div class="element clickable method public getAttributeLinks" data-toggle="collapse" data-target=".getAttributeLinks .collapse">
-<h2>Get attribute_links</h2>
-<pre>getAttributeLinks() : \Generic\EAV\Entity\Doctrine\Common\Collections\Collection</pre>
+<a name="getAttributes" id="getAttributes"></a><div class="element clickable method public getAttributes" data-toggle="collapse" data-target=".getAttributes .collapse">
+<h2>Get attributes</h2>
+<pre>getAttributes() : \Generic\EAV\Entity\Doctrine\Common\Collections\Collection</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Returns</h3>
 <div class="subelement response"><code>\Generic\EAV\Entity\Doctrine\Common\Collections\Collection</code></div>
 </div></div>
-</div>
-<a name="getAttributes" id="getAttributes"></a><div class="element clickable method public getAttributes" data-toggle="collapse" data-target=".getAttributes .collapse">
-<h2>getAttributes()
-        </h2>
-<pre>getAttributes() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="getId" id="getId"></a><div class="element clickable method public getId" data-toggle="collapse" data-target=".getId .collapse">
 <h2>Get id</h2>
@@ -235,13 +191,6 @@
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getRootGroup" id="getRootGroup"></a><div class="element clickable method public getRootGroup" data-toggle="collapse" data-target=".getRootGroup .collapse">
-<h2>getRootGroup()
-        </h2>
-<pre>getRootGroup() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
-</div>
 <a name="setName" id="setName"></a><div class="element clickable method public setName" data-toggle="collapse" data-target=".setName .collapse">
 <h2>Set name</h2>
 <pre>setName(string $name) : <a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></pre>
@@ -257,22 +206,11 @@
 <div class="subelement response"><code><a href="../classes/Generic.EAV.Entity.Type.html">\Generic\EAV\Entity\Type</a></code></div>
 </div></div>
 </div>
-<a name="setRootGroup" id="setRootGroup"></a><div class="element clickable method public setRootGroup" data-toggle="collapse" data-target=".setRootGroup .collapse">
-<h2>setRootGroup()
-        </h2>
-<pre>setRootGroup(\Generic\EAV\Entity\Group $root) </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$root</h4></div>
-</div></div>
-</div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a name="%24attribute_links" id="$attribute_links"> </a><div class="element clickable property protected $attribute_links" data-toggle="collapse" data-target=".$attribute_links .collapse">
-<h2>The entity is linked to one or several attributes, through an association class</h2>
-<pre>$attribute_links </pre>
+<a name="%24attributes" id="$attributes"> </a><div class="element clickable property protected $attributes" data-toggle="collapse" data-target=".$attributes .collapse">
+<h2>$attributes</h2>
+<pre>$attributes </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -305,7 +243,7 @@
 </div></div>
 </div>
 <a name="%24instances" id="$instances"> </a><div class="element clickable property protected $instances" data-toggle="collapse" data-target=".$instances .collapse">
-<h2>The instances of this type</h2>
+<h2>$instances</h2>
 <pre>$instances </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -317,7 +255,7 @@
 </div></div>
 </div>
 <a name="%24name" id="$name"> </a><div class="element clickable property protected $name" data-toggle="collapse" data-target=".$name .collapse">
-<h2>The entity type name (which has to be unique)</h2>
+<h2>$name</h2>
 <pre>$name </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -328,30 +266,6 @@
 </tr></table>
 </div></div>
 </div>
-<a name="%24root_group" id="$root_group"> </a><div class="element clickable property protected $root_group" data-toggle="collapse" data-target=".$root_group .collapse">
-<h2>The root node of this type's display hierarchy</h2>
-<pre>$root_group </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
-<table class="table table-bordered"><tr>
-<th>ORM\OneToOne</th>
-<td>OneToOne</td>
-</tr></table>
-</div></div>
-</div>
-<a name="%24attributes" id="$attributes"> </a><div class="element clickable property private $attributes" data-toggle="collapse" data-target=".$attributes .collapse">
-<h2>$attributes</h2>
-<pre>$attributes </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
-</div>
-<a name="%24children" id="$children"> </a><div class="element clickable property private $children" data-toggle="collapse" data-target=".$children .collapse">
-<h2>$children</h2>
-<pre>$children </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
-</div>
 </div>
 </div>
 </div>
@@ -359,7 +273,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2012-09-24T20:55:41+02:00.<br></footer></div>
+            generated on 2012-09-26T18:53:56+02:00.<br></footer></div>
 </div>
 </body>
 </html>
