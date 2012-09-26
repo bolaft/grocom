@@ -1,5 +1,9 @@
-{% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
+{% extends "GenericSite::index.html.twig" %}
 
-{% block head_title %}GROCOM - Administration{% endblock %}
-{% block body_container_header %}<h1>Administration</h1>{% endblock %}
-{% block body_container_footer %}&copy;GROCOM{% endblock %}
+{% block head_title %}
+	{{ parent() }} {% trans %}Administration{% endtrans %}
+{% endblock %}
+
+{% block body_container_header %}
+	<h1>{% trans %}Administration{% endtrans %}</h1>
+{% endblock %}

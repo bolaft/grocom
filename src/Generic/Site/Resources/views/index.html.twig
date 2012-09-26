@@ -1,5 +1,19 @@
 {% extends "OryzoneBoilerplateBundle::html5.html.twig" %}
 
-{% block head_title %}GROCOM - Site{% endblock %}
-{% block body_container_header %}<h1>Site</h1>{% endblock %}
-{% block body_container_footer %}&copy;GROCOM{% endblock %}
+{% block head_title %}
+	GROCOM
+{% endblock %}
+
+{% block body_container_footer %}
+	&copy;GROCOM
+{% endblock %}
+
+{% block body_chromeframe %}
+	<!--[if lt IE 7]>
+		<p class=chromeframe>
+			{% trans %}
+				boilerplate.browser.ancient
+			{% endtrans %}
+		</p>
+	<![endif]-->
+{% endblock %}
