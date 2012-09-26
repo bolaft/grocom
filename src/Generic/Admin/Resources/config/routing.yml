@@ -1,3 +1,7 @@
 admin_index:
+    pattern:  /
+    defaults: { _controller: GenericAdmin:Admin:index }
+
+admin_slug:
     pattern:  /{slug}
     defaults: { _controller: GenericAdmin:Admin:index }

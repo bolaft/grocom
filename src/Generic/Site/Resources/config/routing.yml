@@ -1,3 +1,7 @@
 site_index:
+    pattern:  /
+    defaults: { _controller: GenericSite:Site:index }
+
+site_slug:
     pattern:  /{slug}
     defaults: { _controller: GenericSite:Site:index }
