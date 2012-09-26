@@ -1,8 +1,8 @@
 site:
-	head:
-		title: GROCOM
-	footer:
-		copyright: GROCOM
+    head:
+        title: GROCOM
+    footer:
+        copyright: GROCOM
 boilerplate:
     browser:
         ancient: Votre navigateur est <em>obsolète !</em> Vous devez en <a href="http://browsehappy.com/">télécharger un autre</a> pour profiter de ce site.
