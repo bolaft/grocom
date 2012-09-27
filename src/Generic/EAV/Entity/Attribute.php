@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
+ * @author Soufian Salim <soufi@nsal.im>
+ * 
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_attribute")
  */

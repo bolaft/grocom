@@ -7,8 +7,16 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Generic\User\Entity\User;
 
+/**
+ * Classe chargeant les données utilisateurs
+ * 
+ * @author Soufian Salim <soufi@nsal.im>
+ */
 class LoadUserData extends AbstractFixture implements OrderedFixtureInterface
 {
+    /**
+     * {@inheritDoc}
+     */
     public function load(ObjectManager $manager)
     {
         $user = new User();

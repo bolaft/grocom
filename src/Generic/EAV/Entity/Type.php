@@ -6,7 +6,10 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Classe mappant les types d'instances.
+ * Classe abstraite mappant les types d'instances.
+ * 
+ * @author   Soufian Salim <soufi@nsal.im>
+ * @abstract
  * 
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_type")
@@ -17,7 +20,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  *      "order"   = "Grocom\Order\Entity\OrderType"
  * })
  */
-class Type
+abstract class TypeAbstract
 {
     /**
      * @var int
@@ -38,7 +41,7 @@ class Type
     /**
      * @var ArrayCollection
      * 
-     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Instance", mappedBy="type");
+     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\InstanceAbstract", mappedBy="type");
      */
     protected $instances;
 
@@ -136,4 +139,12 @@ class Type
     {
         return $this->instances;
     }
+
+    /**
+     * Get the class of this type's instances
+     * 
+     * @abstract
+     * @return   String
+     */
+    abstract public function getInstanceClass()
 }

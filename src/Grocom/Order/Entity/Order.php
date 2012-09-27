@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Instance as BaseInstance;
 use Doctrine\Common\Collections\ArrayCollection
 /**
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ * 
  * @ORM\Entity
  * @ORM\Table(name="grocom_order_order")
  */

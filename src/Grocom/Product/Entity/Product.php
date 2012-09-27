@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Instance as BaseInstance;
 
 /**
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ * 
  * @ORM\Entity
  * @ORM\Table(name="grocom_product_product")
  */

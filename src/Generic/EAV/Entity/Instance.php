@@ -6,6 +6,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
+ * Classe abstraite mappant les instances.
+ *
+ * @author   Soufian Salim <soufi@nsal.im>
+ * @abstract
+ * 
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_instance")
  * @ORM\InheritanceType("JOINED")
@@ -15,7 +20,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  *      "order"   = "Grocom\Order\Entity\Order"
  * })
  */
-class Instance
+abstract class InstanceAbstract
 {
     /**
      * @var int
@@ -29,7 +34,7 @@ class Instance
     /**
      * @var Type
      * 
-     * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="instances")
+     * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\TypeAbstract", inversedBy="instances")
      */
     protected $type;
 

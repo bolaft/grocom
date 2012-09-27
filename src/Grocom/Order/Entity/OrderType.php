@@ -6,14 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Type as BaseType;
 
 /**
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ * 
  * @ORM\Entity
  */
 class OrderType extends BaseType
 {
 	/**
-	 * Retourne '\Order\Product\Entity\Order';
-	 * 
-	 * @return string
+	 * {@inheritDoc}
 	 */
     public function getInstanceClass()
     {

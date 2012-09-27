@@ -8,6 +8,8 @@ use FOS\CommentBundle\Model\SignedCommentInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * @author Soufian Salim <soufi@nsal.im>
+ *
  * @ORM\Entity
  * @ORM\Table(name="generic_comment_comment")
  * @ORM\ChangeTrackingPolicy("DEFERRED_EXPLICIT")

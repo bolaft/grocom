@@ -4,6 +4,11 @@ namespace Generic\User\Tests\Entity;
 
 use Generic\User\Entity\User;
 
+/**
+ * Tests sur les utilisateurs
+ *
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ */
 class UserTest extends \PHPUnit_Framework_TestCase
 {
     public function testAdd()

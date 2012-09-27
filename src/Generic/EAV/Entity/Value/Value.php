@@ -5,6 +5,8 @@ namespace Generic\EAV\Entity\Value;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @author Soufian Salim <soufi@nsal.im>
+ *
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_value")
  * @ORM\InheritanceType("SINGLE_TABLE")

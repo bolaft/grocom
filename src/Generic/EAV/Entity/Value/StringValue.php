@@ -7,6 +7,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Value\Value as BaseValue;
 
 /**
+ * @author Soufian Salim <soufi@nsal.im>
+ *
  * @ORM\Entity
  */
 class StringValue extends BaseValue

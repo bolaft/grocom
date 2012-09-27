@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Classe de gestion du front-office
+ * 
+ * @author Soufian Salim <soufi@nsal.im>
  */
 class SiteController extends Controller
 {

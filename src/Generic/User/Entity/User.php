@@ -1,4 +1,12 @@
 <?php
+/*
+ * This file is part of the Grocom package.
+ *
+ * (c) 2012 grocom
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Generic\User\Entity;
 
@@ -6,6 +14,8 @@ use FOS\UserBundle\Entity\User as FOSUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ * 
  * @ORM\Entity
  * @ORM\Table(name="generic_user_user")
  */

@@ -6,14 +6,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Type as BaseType;
 
 /**
+ * @author Soufian Antoine SALIM <soufi@nsal.im>
+ * 
  * @ORM\Entity
  */
 class ProductType extends BaseType
 {
 	/**
-	 * Retourne '\Grocom\Product\Entity\Product';
-	 * 
-	 * @return string
+	 * {@inheritDoc}
 	 */
     public function getInstanceClass()
     {
