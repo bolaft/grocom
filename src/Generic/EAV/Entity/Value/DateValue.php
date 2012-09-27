@@ -12,6 +12,8 @@ use Generic\EAV\Entity\Value\Value as BaseValue;
 class DateValue extends BaseValue
 {
     /**
+     * @var string
+     * 
      * @ORM\Column(type="date")
      */
     protected $date;

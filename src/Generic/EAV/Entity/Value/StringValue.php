@@ -12,6 +12,8 @@ use Generic\EAV\Entity\Value\Value as BaseValue;
 class StringValue extends BaseValue
 {
     /**
+     * @var string
+     * 
      * @ORM\Column(type="string", length=255)
      */
     protected $string;

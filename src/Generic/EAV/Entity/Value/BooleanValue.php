@@ -12,6 +12,8 @@ use Generic\EAV\Entity\Value\Value as BaseValue;
 class BooleanValue extends BaseValue
 {
     /**
+     * @var boolean
+     * 
      * @ORM\Column(type="boolean")
      */
     protected $boolean;

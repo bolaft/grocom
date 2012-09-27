@@ -12,6 +12,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Attribute
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -19,20 +21,29 @@ class Attribute
     protected $id;
 
     /**
+     * @var string
+     * 
      * @ORM\Column(type="string", length=255, unique=true)
      */
     protected $name;
 
     /**
+     * @var Type
+     * 
      * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="attributes")
      */
     protected $type;
 
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="attribute")
      */
     protected $values;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->values = new ArrayCollection();

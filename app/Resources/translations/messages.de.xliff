@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2012-09-27T11:39:00Z" source-language="en" target-language="de" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="a368f5c58f0425916e82cd904a2715d092594d54" resname=" modal.close ">
+        <jms:reference-file line="11">views/templates/modal.html.twig</jms:reference-file>
+        <jms:reference-file line="11">Resources/views/modal.html.twig</jms:reference-file>
+        <source> modal.close </source>
+        <target state="new"> modal.close </target>
+      </trans-unit>
+      <trans-unit id="2990357334456796dd49845215af1601fc25a7e9" resname="admin.body.title">
+        <jms:reference-file line="9">Resources/views/index.html.twig</jms:reference-file>
+        <source>admin.body.title</source>
+        <target state="new">admin.body.title</target>
+      </trans-unit>
+      <trans-unit id="687dfa60dfef4b7fb718c9b361f721484ac6a266" resname="admin.head.title">
+        <jms:reference-file line="4">Resources/views/index.html.twig</jms:reference-file>
+        <source>admin.head.title</source>
+        <target state="new">admin.head.title</target>
+      </trans-unit>
+      <trans-unit id="ee5813d7e0279e79570b455506034a77b72b9989" resname="boilerplate.browser.ancient">
+        <jms:reference-file line="14">Resources/views/index.html.twig</jms:reference-file>
+        <source>boilerplate.browser.ancient</source>
+        <target state="new">boilerplate.browser.ancient</target>
+      </trans-unit>
+      <trans-unit id="760969a92a716cbd267990fa30af5eec382b34a7" resname="site.footer.copyright">
+        <jms:reference-file line="8">Resources/views/index.html.twig</jms:reference-file>
+        <source>site.footer.copyright</source>
+        <target state="new">site.footer.copyright</target>
+      </trans-unit>
+      <trans-unit id="556591e417a1c183d7d63a39ad204b98c61172e0" resname="site.head.title">
+        <jms:reference-file line="4">Resources/views/index.html.twig</jms:reference-file>
+        <source>site.head.title</source>
+        <target state="new">site.head.title</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

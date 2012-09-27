@@ -13,6 +13,8 @@ use FOS\CommentBundle\Entity\Thread as BaseThread;
 class Thread extends BaseThread
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\Column(type="string")
      */

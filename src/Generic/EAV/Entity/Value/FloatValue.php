@@ -12,6 +12,8 @@ use Generic\EAV\Entity\Value\Value as BaseValue;
 class FloatValue extends BaseValue
 {
     /**
+     * @var int
+     * 
      * @ORM\Column(type="float")
      */
     protected $float;

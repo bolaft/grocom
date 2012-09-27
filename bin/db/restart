@@ -2,8 +2,13 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-echo 'Suppression des tables...' . PHP_EOL;
-exec('php ' . APPLICATION_PATH . '/console doctrine:schema:drop --force');
+echo 'Suppression de la base...' . PHP_EOL;
+exec('php ' . APPLICATION_PATH . '/console doctrine:database:drop --force');
+echo 'Suppression terminée !' . PHP_EOL;
+
+echo 'Création de la base de données...' . PHP_EOL;
+exec('php ' . APPLICATION_PATH . '/console doctrine:database:create');
+echo 'Création terminée !' . PHP_EOL;
 
 echo 'Création des tables...' . PHP_EOL;
 exec('php ' . APPLICATION_PATH . '/console doctrine:schema:create');

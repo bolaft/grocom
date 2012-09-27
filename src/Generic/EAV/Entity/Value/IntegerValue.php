@@ -12,6 +12,8 @@ use Generic\EAV\Entity\Value\Value as BaseValue;
 class IntegerValue extends BaseValue
 {
     /**
+     * @var int
+     * 
      * @ORM\Column(type="integer")
      */
     protected $integer;

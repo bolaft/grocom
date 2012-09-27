@@ -10,6 +10,11 @@ use Generic\EAV\Entity\Type as BaseType;
  */
 class ProductType extends BaseType
 {
+	/**
+	 * Retourne '\Grocom\Product\Entity\Product';
+	 * 
+	 * @return string
+	 */
     public function getInstanceClass()
     {
         return '\Grocom\Product\Entity\Product';

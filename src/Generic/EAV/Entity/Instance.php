@@ -18,6 +18,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Instance
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -25,15 +27,22 @@ class Instance
     protected $id;
 
     /**
+     * @var Type
+     * 
      * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="instances")
      */
     protected $type;
 
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="instance")
      */
     protected $values;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->values = new ArrayCollection();

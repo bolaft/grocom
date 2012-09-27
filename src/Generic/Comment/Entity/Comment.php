@@ -15,6 +15,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class Comment extends BaseComment implements SignedCommentInterface
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
@@ -23,25 +25,38 @@ class Comment extends BaseComment implements SignedCommentInterface
     protected $id;
 
     /**
+     * @var Generic\Comment\Entity\Thread
+     * 
      * @ORM\ManyToOne(targetEntity="Generic\Comment\Entity\Thread")
      */
     protected $thread;
 
     /**
+     * @var Generic\User\Entity\User
+     * 
      * @ORM\ManyToOne(targetEntity="Generic\User\Entity\User")
      */
     protected $author;
 
+    /**
+     * @param UserInterface $author
+     */
     public function setAuthor(UserInterface $author)
     {
         $this->author = $author;
     }
 
+    /**
+     * @return UserInterface
+     */
     public function getAuthor()
     {
         return $this->author;
     }
 
+    /**
+     * @return string
+     */
     public function getAuthorName()
     {
         if (null === $this->getAuthor()) {

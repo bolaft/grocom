@@ -12,25 +12,36 @@ use Generic\EAV\Entity\Instance as BaseInstance;
 class Product extends BaseInstance
 {
     /**
+     * @var boolean
+     * 
      * @ORM\Column(type="boolean")
      */
     protected $published = false;
 
     /**
+     * @var string
+     * 
      * @ORM\Column(type="text")
      */
     protected $description;
 
     /**
+     * @var double
+     * 
      * @ORM\Column(type="decimal")
      */
     protected $price;
     
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\ManyToMany(targetEntity="Grocom\Order\Entity\Order", mappedBy="products")
      */
     protected $orders;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->orders = new \Doctrine\Common\Collections\ArrayCollection();

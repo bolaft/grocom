@@ -12,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 class User extends FOSUser
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -19,10 +21,15 @@ class User extends FOSUser
     protected $id;
     
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\ManyToMany(targetEntity="Grocom\Order\Entity\Order", mappedBy="users")
      */
     protected $orders;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         parent::__construct();

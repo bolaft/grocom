@@ -10,8 +10,13 @@ use Generic\EAV\Entity\Type as BaseType;
  */
 class OrderType extends BaseType
 {
+	/**
+	 * Retourne '\Order\Product\Entity\Order';
+	 * 
+	 * @return string
+	 */
     public function getInstanceClass()
     {
-        return '\Order\Product\Entity\Order';
+        return '\Grocom\Order\Entity\Order';
     }
 }

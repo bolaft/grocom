@@ -6,6 +6,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
+ * Classe mappant les types d'instances.
+ * 
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_type")
  * @ORM\InheritanceType("SINGLE_TABLE")
@@ -18,6 +20,8 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Type
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -25,20 +29,29 @@ class Type
     protected $id;
 
     /**
+     * @var string
+     * 
      * @ORM\Column(type="string", length=50, unique=true, nullable=false)
      */
     protected $name;
 
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Instance", mappedBy="type");
      */
     protected $instances;
 
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Attribute", mappedBy="type");
      */
     protected $attributes;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->instances  = new ArrayCollection();

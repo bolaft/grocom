@@ -4,7 +4,7 @@ namespace Grocom\Order\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Instance as BaseInstance;
-
+use Doctrine\Common\Collections\ArrayCollection
 /**
  * @ORM\Entity
  * @ORM\Table(name="grocom_order_order")
@@ -12,23 +12,30 @@ use Generic\EAV\Entity\Instance as BaseInstance;
 class Order extends BaseInstance
 {
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\ManyToMany(targetEntity="Generic\User\Entity\User", inversedBy="orders")
      * @ORM\JoinTable(name="grocom_order_orders_users")
      */
     protected $users;
 
     /**
+     * @var ArrayCollection
+     * 
      * @ORM\ManyToMany(targetEntity="Grocom\Product\Entity\Product", inversedBy="orders")
      * @ORM\JoinTable(name="grocom_order_orders_products")
      */
     protected $products;
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         parent::__construct();
 
-		$this->users    = new \Doctrine\Common\Collections\ArrayCollection();
-		$this->products = new \Doctrine\Common\Collections\ArrayCollection();
+		$this->users    = new ArrayCollection();
+		$this->products = new ArrayCollection();
     }
 
     /**

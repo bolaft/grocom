@@ -21,6 +21,8 @@ use Doctrine\ORM\Mapping as ORM;
 class Value
 {
     /**
+     * @var int
+     * 
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -28,12 +30,16 @@ class Value
     protected $id;
 
     /**
+     * @var Generic\EAV\Entity\Instance
+     * 
      * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Instance", inversedBy="values")
      */
     protected $instance;
     
     /**
-     * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Attribute", inversedBy="values")
+     *@var Generic\EAV\Entity\Attribute
+     * 
+     *  @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Attribute", inversedBy="values")
      */
     protected $attribute;
 
