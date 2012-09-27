@@ -20,7 +20,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  *      "order"   = "Grocom\Order\Entity\OrderType"
  * })
  */
-abstract class TypeAbstract
+abstract class Type
 {
     /**
      * @var int
@@ -41,7 +41,7 @@ abstract class TypeAbstract
     /**
      * @var ArrayCollection
      * 
-     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\InstanceAbstract", mappedBy="type");
+     * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Instance", mappedBy="type");
      */
     protected $instances;
 
@@ -97,10 +97,10 @@ abstract class TypeAbstract
     /**
      * Add attribute
      *
-     * @param  Generic\EAV\Entity\Attribute $attribute
+     * @param  Attribute $attribute
      * @return Type
      */
-    public function addAttribute(\Generic\EAV\Entity\Attribute $attribute)
+    public function addAttribute(Attribute $attribute)
     {
         $this->attributes[] = $attribute;
 
@@ -110,7 +110,7 @@ abstract class TypeAbstract
     /**
      * Get attributes
      *
-     * @return Doctrine\Common\Collections\Collection
+     * @return Collection
      */
     public function getAttributes()
     {
@@ -120,10 +120,10 @@ abstract class TypeAbstract
     /**
      * Add instance
      *
-     * @param  Generic\EAV\Entity\Instance $instance
+     * @param  Instance $instance
      * @return Type
      */
-    public function addInstance(\Generic\EAV\Entity\Instance $instance)
+    public function addInstance(Instance $instance)
     {
         $this->instances[] = $instance;
 
@@ -133,7 +133,7 @@ abstract class TypeAbstract
     /**
      * Get instances
      *
-     * @return Doctrine\Common\Collections\Collection
+     * @return Collection
      */
     public function getInstances()
     {
@@ -146,5 +146,5 @@ abstract class TypeAbstract
      * @abstract
      * @return   String
      */
-    abstract public function getInstanceClass()
+    abstract public function getInstanceClass();
 }

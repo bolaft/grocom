@@ -3,7 +3,7 @@
 namespace Grocom\Product\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Generic\EAV\Entity\Instance as BaseInstance;
+use Generic\EAV\Entity\Instance;
 
 /**
  * @author Soufian Antoine SALIM <soufi@nsal.im>
@@ -11,7 +11,7 @@ use Generic\EAV\Entity\Instance as BaseInstance;
  * @ORM\Entity
  * @ORM\Table(name="grocom_product_product")
  */
-class Product extends BaseInstance
+class Product extends Instance
 {
     /**
      * @var boolean

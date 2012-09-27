@@ -20,7 +20,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  *      "order"   = "Grocom\Order\Entity\Order"
  * })
  */
-abstract class InstanceAbstract
+abstract class Instance
 {
     /**
      * @var int
@@ -34,7 +34,7 @@ abstract class InstanceAbstract
     /**
      * @var Type
      * 
-     * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\TypeAbstract", inversedBy="instances")
+     * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="instances")
      */
     protected $type;
 
@@ -67,10 +67,10 @@ abstract class InstanceAbstract
     /**
      * Set type
      *
-     * @param  Generic\EAV\Entity\Type $type
+     * @param  Type $type
      * @return Instance
      */
-    public function setType(\Generic\EAV\Entity\Type $type = null)
+    public function setType(Type $type = null)
     {
         $this->type = $type;
 
@@ -80,7 +80,7 @@ abstract class InstanceAbstract
     /**
      * Get type
      *
-     * @return Generic\EAV\Entity\Type
+     * @return Type
      */
     public function getType()
     {
@@ -103,7 +103,7 @@ abstract class InstanceAbstract
     /**
      * Get values
      *
-     * @return Doctrine\Common\Collections\Collection
+     * @return Collection
      */
     public function getValues()
     {

@@ -3,14 +3,14 @@
 namespace Grocom\Product\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Generic\EAV\Entity\Type as BaseType;
+use Generic\EAV\Entity\Type;
 
 /**
  * @author Soufian Antoine SALIM <soufi@nsal.im>
  * 
  * @ORM\Entity
  */
-class ProductType extends BaseType
+class ProductType extends Type
 {
 	/**
 	 * {@inheritDoc}

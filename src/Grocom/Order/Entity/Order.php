@@ -3,15 +3,16 @@
 namespace Grocom\Order\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Generic\EAV\Entity\Instance as BaseInstance;
-use Doctrine\Common\Collections\ArrayCollection
+use Generic\EAV\Entity\Instance;
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @author Soufian Antoine SALIM <soufi@nsal.im>
  * 
  * @ORM\Entity
  * @ORM\Table(name="grocom_order_order")
  */
-class Order extends BaseInstance
+class Order extends Instance
 {
     /**
      * @var ArrayCollection
