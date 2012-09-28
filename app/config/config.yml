@@ -3,31 +3,32 @@ fos_comment:
     class:
         model:
             comment: Generic\Comment\Entity\Comment
-            thread: Generic\Comment\Entity\Thread
+            thread:  Generic\Comment\Entity\Thread
 
 fos_user:
-    db_driver: orm
+    db_driver:     orm
     firewall_name: main
-    user_class: Generic\User\Entity\User
+    user_class:    Generic\User\Entity\User
 
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: doctrine_extensions.yml }
 
 framework:
     #esi:             ~
-    secret:          %secret%
+    secret:     %secret%
     translator: { fallback: fr }
     router:
-        resource: "%kernel.root_dir%/config/routing.yml"
+        resource:            "%kernel.root_dir%/config/routing.yml"
         strict_requirements: %kernel.debug%
-    form:            true
-    csrf_protection: true
-    validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  fr
+    form:                true
+    csrf_protection:     true
+    validation:          { enable_annotations: true }
+    templating:          { engines: ['twig'] } #assets_version: SomeVersionScheme
+    default_locale:      fr
     trust_proxy_headers: false # Whether or not the Request object should trust proxy headers (X_FORWARDED_FOR/HTTP_CLIENT_IP)
-    session:         ~
+    session:             ~
 
 # Twig Configuration
 twig:
@@ -60,7 +61,23 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
+        auto_mapping:                true
+        mappings:
+            translatable:
+                type:   annotation
+                alias:  Gedmo
+                prefix: Gedmo\Translatable\Entity
+                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+            loggable:
+                type:   annotation
+                alias:  Gedmo
+                prefix: Gedmo\Loggable\Entity
+                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+            tree:
+                type:   annotation
+                alias:  Gedmo
+                prefix: Gedmo\Tree\Entity
+                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -78,10 +95,10 @@ jms_serializer:
     handlers:
         object_based: false
         datetime:
-            format: "Y-m-dTH:i:s" # ISO8601
+            format:           "Y-m-dTH:i:s" # ISO8601
             default_timezone: "UTC" # defaults to whatever timezone set in php.ini or via date_default_timezone_set
-        array_collection: true
-        form_error: true
+        array_collection:     true
+        form_error:           true
         constraint_violation: true
 
     property_naming:
@@ -106,14 +123,14 @@ services:
     twig.text_extension:
         class: Twig_Extensions_Extension_Text
         tags:
-            - name: twig.extension
+            - name: twig.extension    # Doctrine Extension listeners to handle behaviors
 
 jms_translation:
     configs:
         app:
-            dirs: [%kernel.root_dir%, %kernel.root_dir%/../src]
-            output_dir: %kernel.root_dir%/Resources/translations
-            #ignored_domains: [routes]
-            excluded_names: [*TestCase.php, *Test.php]
-            excluded_dirs: [cache, data, logs]
-            extractors: [alias_of_the_extractor]
+            dirs:            [%kernel.root_dir%, %kernel.root_dir%/../src]
+            output_dir:      %kernel.root_dir%/Resources/translations
+            ignored_domains: [routes]
+            excluded_names:  [*TestCase.php, *Test.php]
+            excluded_dirs:   [cache, data, logs]
+            extractors:      [alias_of_the_extractor]

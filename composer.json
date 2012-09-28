@@ -23,7 +23,8 @@
         "friendsofsymfony/comment-bundle": "*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "leafo/lessphp": "*",
-        "oryzone/boilerplate-bundle" : "*"
+        "oryzone/boilerplate-bundle" : "*",
+        "gedmo/doctrine-extensions": "master-dev"
     },
     "scripts": {
         "post-install-cmd": [
