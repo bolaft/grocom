@@ -2,4 +2,10 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-echo exec('php ' . APPLICATION_PATH . '/console cache:clear') . PHP_EOL;
+echo 'Changement des droits du cache et des logs...' . PHP_EOL;
+exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/cache ' . APPLICATION_PATH . '/logs');
+echo 'Changement des droits terminé !' . PHP_EOL;
+
+echo 'Suppression du cache...' . PHP_EOL;
+exec('sudo find '. APPLICATION_PATH . '/cache -type f -delete');
+echo 'Suppression terminée' . PHP_EOL;

@@ -2,10 +2,7 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-echo 'Changement des droits de app/cache et app/logs...' . PHP_EOL;
-exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/cache');
-exec('sudo chmod -R 777 ' . APPLICATION_PATH . '/logs');
-echo 'Changement des droits terminé !' . PHP_EOL;
+include_once dirname(__FILE__) . '/../cache/clear';
 
 echo 'Mise à jour des librairies...' . PHP_EOL;
 exec('php ' . ROOT_PATH . 'composer.phar update');

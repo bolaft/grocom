@@ -1,0 +1,23 @@
+<?php
+
+require_once dirname(__FILE__) . '/../bootstrap.php';
+
+$bundles = array(
+	'GenericSite', 
+	'GenericAdmin',
+);
+
+$locales = array(
+	'fr', 
+	'en'
+);
+
+echo 'Génération des chaînes de traduction...' . PHP_EOL;
+
+foreach ($bundles as $bundle){
+	foreach ($locales as $locale){
+		exec('php ' . CONSOLE . 'translation:update --output-format=poc --force ' . $locale . ' '. $bundle);
+	}
+}
+
+echo 'Génération terminée !' . PHP_EOL;

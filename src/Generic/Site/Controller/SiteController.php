@@ -26,6 +26,6 @@ class SiteController extends Controller
      */
     public function pageNotFoundAction()
     {
-        return $this->render('::page_not_found.html.twig');
+        return $this->render('GenericSite::page_not_found.html.twig');
     }
 }

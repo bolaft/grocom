@@ -3,15 +3,15 @@
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
 echo 'Suppression de la base...' . PHP_EOL;
-exec('php ' . APPLICATION_PATH . '/console doctrine:database:drop --force');
+exec('php ' . CONSOLE . 'doctrine:database:drop --force');
 echo 'Suppression terminée !' . PHP_EOL;
 
 echo 'Création de la base de données...' . PHP_EOL;
-exec('php ' . APPLICATION_PATH . '/console doctrine:database:create');
+exec('php ' . CONSOLE . 'doctrine:database:create');
 echo 'Création terminée !' . PHP_EOL;
 
 echo 'Création des tables...' . PHP_EOL;
-exec('php ' . APPLICATION_PATH . '/console doctrine:schema:create');
+exec('php ' . CONSOLE . 'doctrine:schema:create');
 
 include_once('reload');
 
