@@ -124,13 +124,3 @@ services:
         class: Twig_Extensions_Extension_Text
         tags:
             - name: twig.extension    # Doctrine Extension listeners to handle behaviors
-
-jms_translation:
-    configs:
-        app:
-            dirs:            [%kernel.root_dir%, %kernel.root_dir%/../src]
-            output_dir:      %kernel.root_dir%/Resources/translations
-            ignored_domains: [routes]
-            excluded_names:  [*TestCase.php, *Test.php]
-            excluded_dirs:   [cache, data, logs]
-            extractors:      
