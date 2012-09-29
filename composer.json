@@ -1,6 +1,9 @@
 {
     "name": "grocom/grocom",
     "description": "grocom",
+    "config": {
+        "vendor-dir": "lib"
+    },
     "autoload": {
         "psr-0": { "": "src/" }
     },

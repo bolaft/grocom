@@ -16,17 +16,17 @@ doctrine:
                 type:   annotation
                 alias:  Gedmo
                 prefix: Gedmo\Translatable\Entity
-                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                dir:    "%kernel.root_dir%/../lib/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
             loggable:
                 type:   annotation
                 alias:  Gedmo
                 prefix: Gedmo\Loggable\Entity
-                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
+                dir:    "%kernel.root_dir%/../lib/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
             tree:
                 type:   annotation
                 alias:  Gedmo
                 prefix: Gedmo\Tree\Entity
-                dir:    "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
+                dir:    "%kernel.root_dir%/../lib/gedmo/doctrine-extensions/lib/Gedmo/Tree/Entity"
         metadata_cache_driver: apc
         result_cache_driver:   apc
         query_cache_driver:    apc
