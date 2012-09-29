@@ -36,9 +36,20 @@ class PoFileDumper extends FileDumper
      */
     public function format(MessageCatalogue $messages, $fullpath, $domain = 'messages')
     {
+        $header  = 'msgid ""' . PHP_EOL . 'msgstr ""' . PHP_EOL;
+        $header .= 'Project-Id-Version: GROCOM' . PHP_EOL;
+        $header .= 'POT-Creation-Date: ' . PHP_EOL;
+        $header .= 'PO-Revision-Date: ' . PHP_EOL;
+        $header .= 'Last-Translator: GROCOM <contact@grocom.com>' . PHP_EOL;
+        $header .= 'Language-Team: ' . PHP_EOL;
+        $header .= 'MIME-Version: 1.0' . PHP_EOL;
+        $header .= 'Content-Type: text/plain; charset=utf-8' . PHP_EOL;
+        $header .= 'Content-Transfer-Encoding: 8bit' . PHP_EOL;
+        $header .= 'X-Poedit-SourceCharset: utf-8' . PHP_EOL . PHP_EOL;
+
         $file_exists = file_exists($fullpath);
         $content     = $file_exists ? file_get_contents($fullpath) : '';
-        $output      = $file_exists ? '' : 'msgid ""' . PHP_EOL . 'msgstr ""' . PHP_EOL . PHP_EOL;
+        $output      = $file_exists ? '' : $header;
 
         foreach ($messages->all($domain) as $source => $target) {
             $source = sprintf('msgid "%s"', $this->escape($source));

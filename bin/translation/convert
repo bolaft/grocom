@@ -30,3 +30,5 @@ if ('po' == $format){
 
 	echo 'Conversion terminée !' . PHP_EOL;
 }
+
+include_once dirname(__FILE__) . '/../cache/clear';
