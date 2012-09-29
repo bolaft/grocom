@@ -3,3 +3,7 @@
 {% block head_title %}
 	{{ parent() }} {% trans %}home.head.title{% endtrans %}
 {% endblock %}
+
+{% block body_container_main %}
+	{% transchoice count %}{0} There is no apples|{1} There is one apple|]1,Inf] There are %count% apples{% endtranschoice %}
+{% endblock %}

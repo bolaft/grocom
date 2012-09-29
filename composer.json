@@ -1,6 +1,6 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "grocom/grocom",
+    "description": "grocom",
     "autoload": {
         "psr-0": { "": "src/" }
     },

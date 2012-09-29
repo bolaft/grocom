@@ -17,7 +17,7 @@ class SiteController extends Controller
 	 */
     public function indexAction()
     {
-        return $this->render('GenericSite::index.html.twig');
+        return $this->render('GenericSite::index.html.twig', array('count' => 1));
     }
 
     /**

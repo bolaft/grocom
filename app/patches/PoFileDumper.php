@@ -20,41 +20,32 @@ class PoFileDumper extends FileDumper
             throw new \InvalidArgumentException('The file dumper needs a path option.');
         }
 
-        // save a file for each domain
-        foreach ($messages->getDomains() as $domain) {
-            $file = $domain.'.'.$messages->getLocale().'.'.$this->getExtension();
-            // backup
-            $fullpath = $options['path'].'/'.$file;
-            if (file_exists($fullpath)) {
-                copy($fullpath, $fullpath.'~');
-            }
-            // save file
-            file_put_contents($fullpath, $this->format($messages, $fullpath, $domain), FILE_APPEND);
+        $file = 'source.'.$messages->getLocale().'.'.$this->getExtension();
+        // backup
+        $fullpath = $options['path'].'/'.$file;
+        if (file_exists($fullpath)) {
+            copy($fullpath, $fullpath.'~');
         }
+        // save file
+        file_put_contents($fullpath, $this->format($messages, $fullpath), FILE_APPEND);
     }
 
     /**
-     * Transforms the delta of a domain of a message catalogue to its string representation.
-     *
-     * @param  MessageCatalogue $messages
-     * @param  string $file
-     * @param  string $domain
-     * @return The string representation
+     * {@inheritDoc}
      */
-    public function format(MessageCatalogue $messages, $file, $domain = 'messages')
+    public function format(MessageCatalogue $messages, $fullpath, $domain = 'messages')
     {
-        $output  = '';
-        $content = file_exists($file) ? file_get_contents($file) : '';
+        $file_exists = file_exists($fullpath);
+        $content     = $file_exists ? file_get_contents($fullpath) : '';
+        $output      = $file_exists ? '' : 'msgid ""' . PHP_EOL . 'msgstr ""' . PHP_EOL . PHP_EOL;
 
         foreach ($messages->all($domain) as $source => $target) {
-            if(!strpos($source, '"') && null !== $source && '' !== $source && 0 == preg_match('/^[0-9\-]+$/', $source)){
-                $msgid = sprintf('msgid "%s"', $this->escape($source));
+            $source = sprintf('msgid "%s"', $this->escape($source));
+            $target = sprintf('msgstr "%s"', $this->escape($target));
 
-                if(!strpos($content, $msgid)){
-                    $output .= '#: message extracted from source' . PHP_EOL;
-                    $output .= $msgid . PHP_EOL;
-                    $output .= 'msgstr ""' . PHP_EOL;
-                }
+            if(!strpos($content, $source)){
+                $output .= $source . PHP_EOL;
+                $output .= 'msgstr ""' . PHP_EOL . PHP_EOL;
             }
         }
 
