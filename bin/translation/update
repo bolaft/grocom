@@ -2,21 +2,22 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-$bundles = array(
-	'GenericSite', 
-	'GenericAdmin',
-);
+$config = parse_ini_file('config.ini');
 
-$locales = array(
-	'fr', 
-	'en'
-);
+$prefix = $config['prefix'];
+$format = $config['format'];
+
+$locales = explode(',', $config['locales']);
+$bundles = explode(',', $config['bundles']);
 
 echo 'Génération des chaînes de traduction...' . PHP_EOL;
 
 foreach ($bundles as $bundle){
 	foreach ($locales as $locale){
-		exec('php ' . CONSOLE . 'translation:update --output-format=poc --force ' . $locale . ' '. $bundle);
+		exec(sprintf(
+			'php ' . CONSOLE . 'translation:update --prefix="%s" --output-format=%s --force %s %s', 
+			$prefix, $format, $locale, $bundle
+		));
 	}
 }
 

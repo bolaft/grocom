@@ -15,4 +15,15 @@ AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
 
 require_once __DIR__.'/../web/krumo/class.krumo.php';
 
+// patches
+$dir = opendir(__DIR__.'/patches');
+
+while (($filename = readdir($dir)) !== false)
+{
+    if (strpos($filename, '.php', 1)) {
+    	require_once __DIR__.'/patches/'.$filename;
+    }
+}
+closedir($dir);
+
 return $loader;
