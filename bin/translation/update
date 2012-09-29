@@ -23,24 +23,4 @@ foreach ($bundles as $bundle){
 
 echo 'Mise à jour terminée !' . PHP_EOL;
 
-if ('po' == $format){
-	echo 'Conversion po -> mo...' . PHP_EOL;
-
-	require_once 'potomoco/ParserInterface.php';
-	require_once 'potomoco/Parser.php';
-	require_once 'potomoco/Compiler.php';
-	require_once 'potomoco/Message.php';
-
-	$compiler = new \TrekkSoft\Potomoco\Compiler();
-
-	foreach ($bundles as $bundle){
-		foreach ($locales as $locale){
-			$compiler->compile(
-				ROOT_PATH . '/src/' . $bundle . '/Resources/translations/source.' . $locale . '.po',
-				ROOT_PATH . '/src/' . $bundle . '/Resources/translations/messages.' . $locale . '.mo'
-			);
-		}
-	}
-
-	echo 'Conversion terminée !' . PHP_EOL;
-}
+include_once('convert');
