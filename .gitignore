@@ -3,6 +3,7 @@ app/logs/*
 vendor/*
 web/bundles/*
 build/
+app/config/parameters.yml
 app/phpunit.xml
 app/phpdoc.xml
 nbproject
