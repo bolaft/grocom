@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+
+msgid "home.head.title"
+msgstr "Accueil"
+
+msgid "modal.close"
+msgstr "Fermer"
+
+msgid "site.head.title"
+msgstr "GROCOM"
+
+msgid "boilerplate.browser.ancient"
+msgstr "Votre navigateur est <em>obsolète</em> ! Vous devez le <a href="http://browsehappy.com/">mettre à jour</a> ou en <a href="http://browsehappy.com/">changer</a> pour profiter de ce site."
+
+msgid "site.footer.copyright"
+msgstr "GROCOM"
+
+msgid "page.not.found"
+msgstr "Page indisponible"
+
+msgid "home.body.title"
+msgstr "Accueil"
+

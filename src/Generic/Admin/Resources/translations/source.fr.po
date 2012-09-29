@@ -1,0 +1,9 @@
+msgid ""
+msgstr ""
+
+msgid "admin.head.title"
+msgstr "Administration"
+
+msgid "admin.body.title"
+msgstr "Administration"
+

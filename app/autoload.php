@@ -13,9 +13,10 @@ if (!function_exists('intl_get_error_code')) {
 
 AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
 
+// Krumo
 require_once __DIR__.'/../web/krumo/class.krumo.php';
 
-// patches
+// Patches
 $dir = opendir(__DIR__.'/patches');
 
 while (($filename = readdir($dir)) !== false)

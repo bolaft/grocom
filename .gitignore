@@ -1,5 +1,5 @@
-app/cache/*
-app/logs/*
+var/cache/*
+var/logs/*
 vendor/*
 web/bundles/*
 build/
@@ -10,5 +10,4 @@ nbproject
 composer.lock
 .vagrant
 .svn
-*.po
 *~
