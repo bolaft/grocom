@@ -6,3 +6,6 @@
 	\____/_/ |_|\____/\____/\____/_/  /_/   
 	                                        
 ================================================
+
+<strong><a href="https://github.com/s-salim/grocom/wiki">Documentation</a></strong>
+<strong><a href="https://github.com/s-salim/grocom/blob/master/LICENSE.md">License</a></strong>
