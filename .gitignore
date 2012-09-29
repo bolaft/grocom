@@ -1,5 +1,6 @@
 var/cache/*
 var/logs/*
+doc/api/*
 lib/*
 web/bundles/*
 build/
