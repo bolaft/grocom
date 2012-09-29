@@ -1,19 +1,35 @@
 imports:
     - { resource: config.yml }
 
+monolog:
+    handlers:
+        prod_event:
+            type: stream
+            level: error
+            path: %kernel.logs_dir%/%kernel.environment%_event_error.log
+            formatter: monolog.formatter.session_request
+            channels: event
+        prod_request:
+            type: stream
+            level: error
+            path: %kernel.logs_dir%/%kernel.environment%_request_error.log
+            formatter: monolog.formatter.session_request
+            channels: request
+        prod_doctrine:
+            type: stream
+            level: error
+            path: %kernel.logs_dir%/%kernel.environment%_doctrine_error.log
+            formatter: monolog.formatter.session_request
+            channels: doctrine
+        prod_app:
+            type: stream
+            level: error
+            path: %kernel.logs_dir%/%kernel.environment%_app_error.log
+            formatter: monolog.formatter.session_request
+            channels: app
+
 #doctrine:
 #    orm:
 #        metadata_cache_driver: apc
 #        result_cache_driver: apc
 #        query_cache_driver: apc
-
-monolog:
-    handlers:
-        main:
-            type:         fingers_crossed
-            action_level: error
-            handler:      nested
-        nested:
-            type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
-            level: debug

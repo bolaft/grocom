@@ -11,10 +11,30 @@ web_profiler:
 
 monolog:
     handlers:
-        main:
-            type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+        dev_event:
+            type: stream
             level: debug
+            path: %kernel.logs_dir%/%kernel.environment%_event.log
+            formatter: monolog.formatter.session_request
+            channels: event
+        dev_request:
+            type: stream
+            level: debug
+            path: %kernel.logs_dir%/%kernel.environment%_request.log
+            formatter: monolog.formatter.session_request
+            channels: request
+        dev_doctrine:
+            type: stream
+            level: debug
+            path: %kernel.logs_dir%/%kernel.environment%_doctrine.log
+            formatter: monolog.formatter.session_request
+            channels: doctrine
+        dev_app:
+            type: stream
+            level: debug
+            path: %kernel.logs_dir%/%kernel.environment%_app.log
+            formatter: monolog.formatter.session_request
+            channels: app
         firephp:
             type:  firephp
             level: info

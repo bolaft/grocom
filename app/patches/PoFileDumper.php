@@ -8,6 +8,7 @@ use Symfony\Component\Translation\MessageCatalogue;
 /**
  * @author Soufian Salim <soufi@nsal.im>
  * @see    Symfony\Component\Translation\Dumper\PoFileDumper
+ * @see    Symfony\Component\Translation\Dumper\FileDumper
  */
 class PoFileDumper extends FileDumper
 {

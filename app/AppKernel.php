@@ -30,6 +30,7 @@ class AppKernel extends Kernel
             new Generic\EAV\GenericEAV(),
             new Generic\Site\GenericSite(),
             new Generic\User\GenericUser(),
+            new Generic\Log\GenericLog(),
             new Generic\Translation\GenericTranslation(),
             new Grocom\Order\GrocomOrder(),
             new Grocom\Product\GrocomProduct(),
