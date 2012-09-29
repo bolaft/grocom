@@ -1,6 +1,6 @@
 var/cache/*
 var/logs/*
-vendor/*
+lib/*
 web/bundles/*
 build/
 app/config/parameters.yml
