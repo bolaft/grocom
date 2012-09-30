@@ -2,6 +2,7 @@
 
 namespace Grocom\Order\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Generic\EAV\Entity\Instance;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -14,6 +15,22 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 class Order extends Instance
 {
+    /**
+     * @var datetime
+     * 
+     * @Gedmo\Timestampable(on="create")
+     * @ORM\Column(type="datetime")
+     */
+    protected $created;
+
+    /**
+     * @var datetime
+     * 
+     * @Gedmo\Timestampable(on="update")
+     * @ORM\Column(type="datetime")
+     */
+    protected $updated;
+
     /**
      * @var ArrayCollection
      * 
@@ -39,6 +56,26 @@ class Order extends Instance
 
 		$this->users    = new ArrayCollection();
 		$this->products = new ArrayCollection();
+    }
+
+    /**
+     * Get created
+     * 
+     * @return datetime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Get updated
+     * 
+     * @return datetime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 
     /**
