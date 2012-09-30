@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @author Soufian Salim <soufi@nsal.im>
+ * @abstract
  *
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_value")
@@ -15,12 +16,12 @@ use Doctrine\ORM\Mapping as ORM;
  *      "string"  = "Generic\EAV\Entity\Value\StringValue",
  *      "text"    = "Generic\EAV\Entity\Value\TextValue",
  *      "integer" = "Generic\EAV\Entity\Value\IntegerValue",
- *      "float"   = "Generic\EAV\Entity\Value\FloatValue",
+ *      "decimal" = "Generic\EAV\Entity\Value\DecimalValue",
  *      "boolean" = "Generic\EAV\Entity\Value\BooleanValue",
  *      "date"    = "Generic\EAV\Entity\Value\DateValue",
  * })
  */
-class Value
+abstract class Value
 {
     /**
      * @var int
@@ -91,4 +92,21 @@ class Value
     {
         return $this->attribute;
     }
+
+    /**
+     * Set value
+     * 
+     * @abstract
+     * @param    mixed $value
+     * @return   Value
+     */
+    abstract public function setValue($value);
+
+    /**
+     * Get value
+     * 
+     * @abstract
+     * @return   mixed
+     */
+    abstract public function getValue();
 }

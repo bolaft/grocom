@@ -6,3 +6,5 @@ echo 'Chargement des fixtures : "y" pour continuer, "n" pour annuler' . PHP_EOL;
 exec('php ' . CONSOLE . 'doctrine:fixtures:load');
 
 echo 'Chargement terminé !' . PHP_EOL;
+
+include_once dirname(__FILE__) . '/../cache/clear';

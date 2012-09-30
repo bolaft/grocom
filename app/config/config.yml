@@ -6,11 +6,11 @@ imports:
     - { resource: vendor/monolog.yml }
     - { resource: vendor/swiftmailer.yml }
     - { resource: vendor/doctrine.yml }
-    - { resource: vendor/doctrine_extensions.yml }
     - { resource: vendor/sensio_framework_extra.yml }
     - { resource: vendor/fos_comment.yml }
     - { resource: vendor/fos_user.yml }
     - { resource: vendor/jms_serializer.yml }
+    - { resource: vendor/stof_doctrine_extensions.yml }
 
 framework:
     #esi:             ~

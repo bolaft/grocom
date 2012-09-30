@@ -10,33 +10,33 @@ use Generic\EAV\Entity\Value\Value;
  *
  * @ORM\Entity
  */
-class DateValue extends Value
+class DecimalValue extends Value
 {
     /**
-     * @var string
+     * @var double
      * 
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="decimal")
      */
-    protected $date;
+    protected $decimal;
 
     /**
      * Set value
      * 
-     * @param  string $value
-     * @return DateValue
+     * @param  double $value
+     * @return DecimalValue
      */
     public function setValue($value)
     {
-        $this->date = $value;
+        $this->decimal = $value;
     }
 
     /**
      * Get value
      * 
-     * @return string
+     * @return double
      */
     public function getValue()
     {
-        return $this->date;
+        return $this->decimal;
     }
 }

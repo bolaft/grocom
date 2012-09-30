@@ -3,6 +3,7 @@
 namespace Generic\EAV\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -34,6 +35,7 @@ abstract class Type
     /**
      * @var string
      * 
+     * @Gedmo\Translatable
      * @ORM\Column(type="string", length=50, unique=true, nullable=false)
      */
     protected $name;
@@ -51,6 +53,13 @@ abstract class Type
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Attribute", mappedBy="type");
      */
     protected $attributes;
+
+    /**
+     * @var string
+     * 
+     * @Gedmo\Locale
+     */
+    protected $locale;
 
     /**
      * Constructor
@@ -141,10 +150,23 @@ abstract class Type
     }
 
     /**
+     * Set locale
+     *
+     * @param  string $locale
+     * @return Attribute
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
+    }
+
+    /**
      * Get the class of this type's instances
      * 
      * @abstract
-     * @return   String
+     * @return   string
      */
     abstract public function getInstanceClass();
 }

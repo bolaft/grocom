@@ -8,3 +8,5 @@ echo exec('php ' . CONSOLE . 'doctrine:schema:update') . PHP_EOL;
 include_once 'reload';
 
 echo 'Mise à jour terminée !' . PHP_EOL;
+
+include_once dirname(__FILE__) . '/../cache/clear';

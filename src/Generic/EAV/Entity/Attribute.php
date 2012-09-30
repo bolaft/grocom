@@ -3,6 +3,7 @@
 namespace Generic\EAV\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -25,6 +26,7 @@ class Attribute
     /**
      * @var string
      * 
+     * @Gedmo\Translatable
      * @ORM\Column(type="string", length=255, unique=true)
      */
     protected $name;
@@ -42,6 +44,14 @@ class Attribute
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="attribute")
      */
     protected $values;
+
+
+    /**
+     * @var string
+     * 
+     * @Gedmo\Locale
+     */
+    protected $locale;
 
     /**
      * Constructor
@@ -128,5 +138,18 @@ class Attribute
     public function getValues()
     {
         return $this->values;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param  string $locale
+     * @return Attribute
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
     }
 }

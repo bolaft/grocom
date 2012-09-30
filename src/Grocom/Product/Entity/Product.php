@@ -21,13 +21,6 @@ class Product extends Instance
     protected $published = false;
 
     /**
-     * @var string
-     * 
-     * @ORM\Column(type="text")
-     */
-    protected $description;
-
-    /**
      * @var double
      * 
      * @ORM\Column(type="decimal")
@@ -86,29 +79,6 @@ class Product extends Instance
     public function getPublished()
     {
         return $this->published;
-    }
-    
-    /**
-     * Set description
-     *
-     * @param  string $description
-     * @return Product
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
     }
     
     /**

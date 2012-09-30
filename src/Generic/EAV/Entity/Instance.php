@@ -2,6 +2,7 @@
 
 namespace Generic\EAV\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -32,6 +33,22 @@ abstract class Instance
     protected $id;
 
     /**
+     * @var string
+     * 
+     * @Gedmo\Translatable
+     * @ORM\Column(type="string", length=50, unique=true, nullable=false)
+     */
+    protected $name;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Translatable
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $description;
+
+    /**
      * @var Type
      * 
      * @ORM\ManyToOne(targetEntity="Generic\EAV\Entity\Type", inversedBy="instances")
@@ -44,6 +61,13 @@ abstract class Instance
      * @ORM\OneToMany(targetEntity="Generic\EAV\Entity\Value\Value", mappedBy="instance")
      */
     protected $values;
+
+    /**
+     * @var string
+     * 
+     * @Gedmo\Locale
+     */
+    protected $locale;
 
     /**
      * Constructor
@@ -63,6 +87,51 @@ abstract class Instance
         return $this->id;
     }
 
+    /**
+     * Set name
+     *
+     * @param  string $name
+     * @return Instance
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * Set description
+     *
+     * @param  string $description
+     * @return Instance
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
     /**
      * Set type
@@ -108,5 +177,18 @@ abstract class Instance
     public function getValues()
     {
         return $this->values;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param  string $locale
+     * @return Instance
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
     }
 }
