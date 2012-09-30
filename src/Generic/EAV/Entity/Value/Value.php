@@ -54,7 +54,6 @@ abstract class Value
      */
     public function setInstance(\Generic\EAV\Entity\Instance $instance)
     {
-        $instance->addValue($this);
         $this->instance = $instance;
 
         return $this;
