@@ -27,7 +27,7 @@ class PoFileDumper extends FileDumper
         if (file_exists($fullpath)) {
             copy($fullpath, $fullpath.'~');
         }
-        // save file
+        // append file
         file_put_contents($fullpath, $this->format($messages, $fullpath), FILE_APPEND);
     }
 
@@ -53,7 +53,6 @@ class PoFileDumper extends FileDumper
 
         foreach ($messages->all($domain) as $source => $target) {
             $source = sprintf('msgid "%s"', $this->escape($source));
-            $target = sprintf('msgstr "%s"', $this->escape($target));
 
             if(!strpos($content, $source)){
                 $output .= $source . PHP_EOL;
@@ -81,6 +80,12 @@ class PoFileDumper extends FileDumper
      */
     private function escape($str)
     {
-        return addcslashes($str, "\0..\37\42\134");
+        $str = addcslashes($str, "\0..\37\42\134");
+        $str = str_replace('\t', '', $str);
+        $str = str_replace('\n', '', $str);
+        $str = str_replace('\r', '', $str);
+        $str = str_replace('\0', '', $str);
+
+        return $str;
     }
 }

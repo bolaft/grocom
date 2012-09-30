@@ -2,5 +2,5 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-include('delete');
-include('create');
+include_once 'delete';
+include_once 'create';

@@ -13,6 +13,6 @@ echo 'Création terminée !' . PHP_EOL;
 echo 'Création des tables...' . PHP_EOL;
 exec('php ' . CONSOLE . 'doctrine:schema:create');
 
-include_once('reload');
+include_once 'reload';
 
 echo 'Redémarrage terminé !' . PHP_EOL;

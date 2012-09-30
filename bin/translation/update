@@ -5,6 +5,7 @@ require_once dirname(__FILE__) . '/../bootstrap.php';
 $config = parse_ini_file('config.ini');
 
 $format = $config['format'];
+$prefix = $config['prefix'];
 
 $locales = explode(',', $config['locales']);
 $bundles = explode(',', $config['bundles']);
@@ -16,11 +17,11 @@ foreach ($bundles as $bundle){
 
 	foreach ($locales as $locale){
 		exec(sprintf(
-			'php ' . CONSOLE . 'translation:update --prefix="" --output-format=%s --force %s %s', $format, $locale, $bundle
+			'php ' . CONSOLE . 'translation:update --prefix="%s" --output-format=%s --force %s %s', $prefix, $format, $locale, $bundle
 		));
 	}
 }
 
 echo 'Mise à jour terminée !' . PHP_EOL;
 
-include_once('convert');
+include_once 'convert';

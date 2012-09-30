@@ -11,8 +11,8 @@ Content-Transfer-Encoding: 8bit
 X-Poedit-SourceCharset: utf-8
 
 msgid "admin.head.title"
-msgstr "Administration"
+msgstr "Adminsitration"
 
 msgid "admin.body.title"
-msgstr "Administration"
+msgstr "Adminsitration"
 

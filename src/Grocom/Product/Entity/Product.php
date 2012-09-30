@@ -40,6 +40,20 @@ class Product extends Instance
      * @ORM\ManyToMany(targetEntity="Grocom\Order\Entity\Order", mappedBy="products")
      */
     protected $orders;
+    
+    /**
+     * @var ArrayCollection
+     * 
+     * @ORM\ManyToMany(targetEntity="Grocom\Product\Entity\Make", mappedBy="products")
+     */
+    protected $makes;
+    
+    /**
+     * @var ArrayCollection
+     * 
+     * @ORM\ManyToMany(targetEntity="Grocom\Product\Entity\Make", mappedBy="products")
+     */
+    protected $models;
 
     /**
      * Constructor
@@ -47,6 +61,8 @@ class Product extends Instance
     public function __construct()
     {
         $this->orders = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->makes  = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->models = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -122,7 +138,7 @@ class Product extends Instance
      * Set orders
      *
      * @param  array $orders
-     * @return \Grocom\Product\Entity\Product
+     * @return Product
      */
     public function setOrders(array $orders)
     {
@@ -137,7 +153,7 @@ class Product extends Instance
      * Add order
      *
      * @param  \Grocom\Order\Entity\Order $order
-     * @return \Grocom\Product\Entity\Product
+     * @return Product
      */
     public function addOrder(\Grocom\Order\Entity\Order $order)
     {
@@ -150,7 +166,7 @@ class Product extends Instance
      * Remove order
      *
      * @param  \Grocom\Order\Entity\Order $order
-     * @return \Grocom\Product\Entity\Product
+     * @return Product
      */
     public function removeOrder(\Grocom\Order\Entity\Order $order)
     {
@@ -167,5 +183,107 @@ class Product extends Instance
     public function getOrders()
     {
         return $this->orders;
+    }
+
+    /**
+     * Set makes
+     *
+     * @param  array $makes
+     * @return Product
+     */
+    public function setMakes(array $makes)
+    {
+        foreach ($makes as $make) {
+            $this->addMake($make);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Add make
+     *
+     * @param  Make $make
+     * @return Product
+     */
+    public function addMake(Make $make)
+    {
+        $this->makes[] = $make;
+
+        return $this;
+    }
+
+    /**
+     * Remove make
+     *
+     * @param  Make $make
+     * @return Product
+     */
+    public function removeMake(Make $make)
+    {
+        $this->makes->removeElement($make);
+
+        return $this;
+    }
+
+    /**
+     * Get makes
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getMakes()
+    {
+        return $this->makes;
+    }
+
+    /**
+     * Set models
+     *
+     * @param  array $models
+     * @return Product
+     */
+    public function setModels(array $models)
+    {
+        foreach ($models as $model) {
+            $this->addModel($model);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Add model
+     *
+     * @param  Model $model
+     * @return Product
+     */
+    public function addModel(Model $model)
+    {
+        $this->models[] = $model;
+
+        return $this;
+    }
+
+    /**
+     * Remove model
+     *
+     * @param  Model $model
+     * @return Product
+     */
+    public function removeModel(Model $model)
+    {
+        $this->models->removeElement($model);
+
+        return $this;
+    }
+
+    /**
+     * Get models
+     *
+     * @return Doctrine\Common\Collections\Collection
+     */
+    public function getModels()
+    {
+        return $this->models;
     }
 }

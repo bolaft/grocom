@@ -8,7 +8,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Generic\User\Entity\User;
 
 /**
- * Classe chargeant les données utilisateurs
+ * Charge les données utilisateurs
  * 
  * @author Soufian Salim <soufi@nsal.im>
  */

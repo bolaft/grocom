@@ -5,6 +5,6 @@ require_once dirname(__FILE__) . '/../bootstrap.php';
 echo 'Mise à jour des tables...' . PHP_EOL;
 echo exec('php ' . CONSOLE . 'doctrine:schema:update') . PHP_EOL;
 
-include_once('reload');
+include_once 'reload';
 
 echo 'Mise à jour terminée !' . PHP_EOL;
