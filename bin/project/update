@@ -2,8 +2,6 @@
 
 require_once dirname(__FILE__) . '/../bootstrap.php';
 
-include_once dirname(__FILE__) . '/../cache/clear';
-
 echo 'Mise à jour des librairies...' . PHP_EOL;
 exec('php ' . ROOT_PATH . 'composer.phar update');
 echo 'Mise à jour terminée !' . PHP_EOL;
