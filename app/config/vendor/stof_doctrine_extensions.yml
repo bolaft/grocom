@@ -16,8 +16,8 @@ doctrine:
                 mappings:
                     gedmo_translatable:
                         type: annotation
-                        prefix: Gedmo\Translatable\Entity
-                        dir: "%kernel.root_dir%/../lib/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+                        prefix: Generic\Translation\Entity
+                        dir: "%kernel.root_dir%/../src/Generic/Translation/Entity"
                         alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
                         is_bundle: false
                     gedmo_translator:

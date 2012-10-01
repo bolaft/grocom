@@ -1,0 +1,11 @@
+{% extends "GrocomPage:templates:boilerplate.html.twig" %}
+
+{% block head_title %}
+	{{ parent() }} {% trans %}admin.head.title{% endtrans %}
+{% endblock %}
+
+{% block body_container_header %}
+	<h1>
+		{% trans %}admin.body.title{% endtrans %}
+	</h1>
+{% endblock %}

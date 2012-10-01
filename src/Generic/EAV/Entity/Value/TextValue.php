@@ -9,6 +9,7 @@ use Generic\EAV\Entity\Value\Value;
 /**
  * @author Soufian Salim <soufi@nsal.im>
  *
+ * @Gedmo\TranslationEntity(class="Generic\EAV\Entity\Translation")
  * @ORM\Entity
  */
 class TextValue extends Value

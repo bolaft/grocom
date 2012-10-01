@@ -9,6 +9,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @author Soufian Salim <soufi@nsal.im>
  * 
+ * @Gedmo\TranslationEntity(class="Generic\EAV\Entity\Translation")
  * @ORM\Entity
  * @ORM\Table(name="generic_eav_attribute")
  */

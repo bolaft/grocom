@@ -1,7 +1,0 @@
-admin_index:
-    pattern:  /
-    defaults: { _controller: GenericAdmin:Admin:index }
-
-admin_not_found:
-    pattern:  /{slug}
-    defaults: { _controller: GenericSite:Site:pageNotFound }

@@ -1,7 +1,0 @@
-site_index:
-    pattern:  /
-    defaults: { _controller: GenericSite:Site:index }
-
-site_not_found: # Laisser en bas du fichier
-    pattern:  /{slug}
-    defaults: { _controller: GenericSite:Site:pageNotFound }
