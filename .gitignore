@@ -12,3 +12,4 @@ composer.lock
 .vagrant
 .svn
 *~
+!lib/.htaccess
