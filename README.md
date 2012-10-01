@@ -7,7 +7,5 @@
 	                                        
 ================================================
 
-<ul>
-	<li><strong><a href="https://github.com/s-salim/grocom/wiki">Documentation</a></strong></li>
-	<li><strong><a href="https://github.com/s-salim/grocom/blob/master/LICENSE.md">License</a></strong></li>
-</ul>
+* [**Documentation**](https://github.com/s-salim/grocom/wiki)
+* [**Licence**](https://github.com/s-salim/grocom/blob/master/LICENSE.md)
