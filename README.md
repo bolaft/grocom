@@ -8,4 +8,4 @@
 ================================================
 
 * [**Documentation**](https://github.com/s-salim/grocom/wiki)
-* [**Licence**](https://github.com/s-salim/grocom/blob/master/LICENSE.md)
+* [**License**](https://github.com/s-salim/grocom/blob/master/LICENSE.md)
