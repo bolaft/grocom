@@ -25,7 +25,6 @@
         "friendsofsymfony/comment-bundle": "*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "leafo/lessphp": "*",
-        "oryzone/boilerplate-bundle" : "*",
         "stof/doctrine-extensions-bundle": "dev-master"
     },
     "scripts": {

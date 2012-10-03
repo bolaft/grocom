@@ -1,6 +1,6 @@
 <?php
 
-namespace Grocom\Page;
+namespace Generic\Page;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * 
  * @author Soufian Salim <soufi@nsal.im>
  */
-class GrocomPage extends Bundle
+class GenericPage extends Bundle
 {
 
 }
