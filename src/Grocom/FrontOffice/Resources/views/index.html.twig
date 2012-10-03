@@ -4,10 +4,6 @@
 	{{ parent() }} {% trans %}home.head.title{% endtrans %}
 {% endblock %}
 
-{% block body_header %}
-	{% block body_header_title %}
-		<h1>
-			{% trans %}home.body.title{% endtrans %}
-		</h1>
-	{% endblock %}
+{% block body_content %}
+		<h1>{% trans %}home.body.title{% endtrans %}</h1>
 {% endblock %}

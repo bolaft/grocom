@@ -3,6 +3,8 @@ var/logs/*
 doc/api/*
 lib/*
 web/bundles/*
+web/css/*
+web/js/*
 build/
 app/config/parameters.yml
 app/phpunit.xml
